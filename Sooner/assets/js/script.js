@@ -1,7 +1,7 @@
 window.onload = () => {
   // Set the countdown
 
-  let deadline = new Date("Sep 7, 2019 15:37:25").getTime();
+  let deadline = new Date("Sep 11, 2019 15:37:25").getTime();
   let _days = document.querySelector("div.header .countdown .days .nbr")
   let _hours = document.querySelector("div.header .countdown .hours .nbr")
   let _minutes = document.querySelector("div.header .countdown .minutes .nbr")

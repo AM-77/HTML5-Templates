@@ -336,69 +336,9 @@ a:hover {
     content: "";
     width: 100%;
     height: 100%;
-    background: #111111cc;
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.background ul {
-    display: block;
-    width: 400%;
-    height: 100%;
-    position: relative;
-    animation: sliding 30000ms linear forwards running infinite
-}
-
-@keyframes sliding {
-    0% {
-        right: 0%;
-    }
-
-    20% {
-        right: 100%;
-    }
-
-    33% {
-        right: 100%;
-    }
-
-    53% {
-        right: 200%;
-    }
-
-    66% {
-        right: 200%;
-    }
-
-    86% {
-        right: 300%;
-    }
-
-    100% {
-        right: 300%;
-    }
-}
-
-.background ul li {
-    display: inline-block;
-    width: 25%;
-    height: 100%;
-    float: left;
-    background-position: center;
-    background-size: cover;
-}
-
-.background ul li.bg-1 {
-    background-image: url("../images/bence-balla-schottner-RTpuIm0nD98-unsplash.jpg");
-}
-
-.background ul li.bg-2 {
-    background-image: url("../images/eric-muhr-IuqWcKKkYdc-unsplash.jpg")
-}
-
-.background ul li.bg-3 {
-    background-image: url("../images/liz-fitch-vVS69Rl-gSQ-unsplash.jpg")
 }
 
 /* RESPONSIVE */
