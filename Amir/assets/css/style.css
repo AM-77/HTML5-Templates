@@ -1,68 +1,58 @@
 /* RESET CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 
 body {
-	line-height: 1;
+    line-height: 1;
 }
 
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 body {
-	-webkit-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
 }
 
 mark {
-	background-color: transparent;
-	color: inherit;
+    background-color: transparent;
+    color: inherit;
 }
 
 input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+    border: 0;
+    padding: 0;
 }
 
 input, select, textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
 }
 
 html {
@@ -70,61 +60,163 @@ html {
 }
 
 *, *:before, *:after {
+    font-family: Rubik;
+    color: #2D253D;
     box-sizing: inherit;
 }
 
 /***  CONTAINER  ***/
-.container{
+.container {
     display: block;
     width: 100%;
-    padding: 0 10%;
 }
-/***  HEADER  ***/
 
+/***  HEADER  ***/
 /* logo */
-header.header{
+header.header {
     display: block;
     width: 100%;
     height: 60px;
+    padding: 0 7%;
+    background: #FFFFFF;
 }
 
-header.header .logo{
+header.header .logo {
     display: inline-block;
     width: 110px;
     height: 60px;
     padding: 5px 0px 0px 0px;
 }
 
-header.header .logo img{
+header.header .logo img {
     display: block;
     width: 100%;
     height: auto;
 }
 
 /* navbar */
-header.header nav.navbar{
+header.header nav.navbar {
     display: inline-block;
     height: 100%;
     float: right;
 }
 
-header.header nav.navbar ul{
+header.header nav.navbar ul {
     width: 100%;
     height: 100%;
 }
 
-header.header nav.navbar ul li{
+header.header nav.navbar ul li {
     display: inline-block;
-    line-height: 3.75;
-    margin-right: 45px;
+    line-height: 4;
+    margin-right: 35px;
 }
 
-header.header nav.navbar ul li:last-child{
+header.header nav.navbar ul li:last-child {
     margin-right: 0px;
 }
 
-header.header nav.navbar li a{
+header.header nav.navbar li a {
     font: 500 15px "Rubik", sans-serif;
     text-decoration: none;
-    color: #212121
+    font-weight: 700;
+    transition: color 250ms ease forwards;
+    -webkit-transition: color 250ms ease forwards;
+}
+
+header.header nav.navbar li a:hover {
+    color: #125C4B;
+}
+
+header.header nav.navbar li a.current {
+    color: #007147
+}
+
+header.header nav.navbar li a.current:after {
+    display: block;
+    content: "";
+    width: 120%;
+    height: 3px;
+    background: #007147;
+    border-radius: 3px;
+    position: relative;
+    top: -20px;
+    right: 10%;
+}
+
+/***  BANNER  ***/
+section.banner {
+    display: block;
+    padding: 120px 7%;
+}
+
+section.banner .title {
+    display: inline-block;
+}
+
+section.banner .title h3 {
+    display: block;
+    position: relative;
+    font-size: 40px;
+}
+
+section.banner .title h3:after {
+    display: block;
+    content: "";
+    width: 420px;
+    height: 3px;
+    background: #2D253D;
+    float: right;
+    position: relative;
+    top: 20px;
+}
+
+section.banner .title h1 {
+    display: block;
+    position: relative;
+    font-size: 75px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+section.banner .title p {
+    display: block;
+    position: relative;
+    font-size: 30px;
+    margin: 35px 0;
+}
+
+section.banner .title button {
+    display: inline-block;
+    width: 130px;
+    height: 45px;
+    background: linear-gradient(90deg, #119955, #125C4B);
+    border: 0px solid #125C4B;
+    border-radius: 3px;
+    color: #E0E0E0;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0px 8px 12px -8px #125C4B;
+    transition: all 150ms ease;
+}
+
+section.banner .title button:first-child {
+    margin-right: 25px;
+}
+
+section.banner .title button:hover {
+    color: #125C4B;
+    background: #E0E0E0;
+    box-shadow: 0px 0px 0px 0px #125C4B;
+}
+
+section.banner .image {
+    display: inline-block;
+    float: right;
+    width: 450px;
+}
+
+section.banner .image img {
+    display: block;
+    width: 100%;
 }
