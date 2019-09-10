@@ -21,7 +21,7 @@
             margin: 30,
             items: 3,
             autoplay: false,
-            smartSpeed: 2500,
+            smartSpeed: 500,
             dots: true,
             responsiveClass: true,
             responsive: {
@@ -32,7 +32,7 @@
                     items: 2
                 },
                 1200: {
-                    items: 4
+                    items: 3
                 }
             }
         })
