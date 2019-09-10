@@ -273,7 +273,7 @@ section.intro .introduction p{
     font-family: "Source sans pro";
     font-size: 16px;
     text-indent: 15px;
-    line-height: 1.7;
+    line-height: 1.5;
     margin-bottom: 45px;
     color: #777777;
 }
@@ -286,10 +286,23 @@ section.services{
     overflow: hidden;
 }
 
-section.services h3{
+section.services .head{
+    display: block;
+    text-align: left;
+}
+
+section.services .head h3{
     font-size: 35px;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+section.services .head p{
+    font-family: "Source sans pro";
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 45px;
+    color: #777777;
 }
 
 section.services .service{
