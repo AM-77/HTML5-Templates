@@ -17,11 +17,17 @@
     //* Setting the services slider
     function services_slider() {
         $('.services .owl-carousel').owlCarousel({
+            nav: true,
+            navText: ['<i class="lnr lnr-arrow-left"></i>', '<i class="lnr lnr-arrow-right"></i>'],
+            mouseDrag: false,
+            touchDrag: false,
+            pullDrag: false,
+            rtl: !true,
             loop: true,
             margin: 30,
             items: 3,
-            autoplay: false,
-            smartSpeed: 500,
+            autoplay: true,
+            smartSpeed: 700,
             dots: true,
             responsiveClass: true,
             responsive: {

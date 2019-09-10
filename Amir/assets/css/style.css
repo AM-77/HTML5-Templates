@@ -55,13 +55,13 @@ input, select, textarea {
     appearance: none;
 }
 
-html {
+html, body {
+    font-family: Rubik;
+    color: #2D253D;
     box-sizing: border-box;
 }
 
 *, *:before, *:after {
-    font-family: Rubik;
-    color: #2D253D;
     box-sizing: inherit;
 }
 
@@ -137,6 +137,7 @@ header.header nav.navbar ul li:last-child {
 
 header.header nav.navbar li a {
     font: 500 15px "Rubik", sans-serif;
+    color: #2D253D;
     text-decoration: none;
     font-weight: 700;
     transition: color 250ms ease forwards;
@@ -220,6 +221,7 @@ section.intro .introduction button {
     border: 0px solid #125C4B;
     border-radius: 3px;
     color: #E0E0E0;
+    font-family: Rubik;
     font-size: 15px;
     cursor: pointer;
     box-shadow: 0px 8px 12px -8px #125C4B;
@@ -353,6 +355,25 @@ section.services .service .service-discription p {
 
 section.services .owl-carousel .owl-stage-outer{
     overflow: visible;
+    position: relative;
+}
+
+section.services .owl-carousel .owl-nav{
+    display: block;
+    position: absolute;
+    top: -60px;
+    right: 0px
+
+}
+
+section.services .owl-carousel .owl-nav .owl-next{
+    display: inline-block;
+    font-size: 45px;
+    color: #008448;
+}
+
+section.services .owl-carousel .owl-nav .owl-prev{
+    display: none;
 }
 
 section.services .owl-carousel .owl-dots{
