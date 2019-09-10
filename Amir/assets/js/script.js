@@ -2,7 +2,7 @@
     "use strict"
 
     //* Fixing The Navbar
-    function fix_navbar() {
+    function _fix_navbar() {
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
             if (scroll >= $('header.header').height()) {
@@ -12,36 +12,41 @@
             }
         })
     }
-    fix_navbar()
+    _fix_navbar()
 
-    //* Setting the services slider
-    function services_slider() {
-        $('.services .owl-carousel').owlCarousel({
+
+    function _slider(selector, items_0, items_900, items_1200) {
+        $(selector).owlCarousel({
             nav: true,
             navText: ['<i class="lnr lnr-arrow-left"></i>', '<i class="lnr lnr-arrow-right"></i>'],
-            mouseDrag: false,
-            touchDrag: false,
-            pullDrag: false,
-            rtl: !true,
+            mouseDrag: true,
+            touchDrag: true,
+            pullDrag: true,
+            rtl: false,
             loop: true,
             margin: 30,
             items: 3,
-            autoplay: true,
+            autoplay: false,
             smartSpeed: 700,
             dots: true,
             responsiveClass: true,
             responsive: {
                 0: {
-                    items: 1
+                    items: items_0
                 },
-                991: {
-                    items: 2
+                900: {
+                    items: items_900
                 },
                 1200: {
-                    items: 3
+                    items: items_1200
                 }
             }
         })
     }
-    services_slider();
+
+    //* Setting the services slider
+    _slider('.services .owl-carousel', 1, 2, 3)
+    //* Setting the clients slider
+    _slider('.clients .owl-carousel', 1, 2, 2)
+
 })(jQuery)
