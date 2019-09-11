@@ -15,6 +15,7 @@
     _fix_navbar()
 
 
+    //* The sliders
     function _slider(selector, items_0, items_900, items_1200) {
         $(selector).owlCarousel({
             nav: true,
@@ -44,9 +45,9 @@
         })
     }
 
-    //* Setting the services slider
+    //* The services slider
     _slider('.services .owl-carousel', 1, 2, 3)
-    //* Setting the clients slider
+    //* The clients slider
     _slider('.clients .owl-carousel', 1, 2, 2)
 
 })(jQuery)
