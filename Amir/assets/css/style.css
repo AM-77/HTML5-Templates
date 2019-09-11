@@ -522,17 +522,23 @@ section.clients .owl-carousel .owl-dots .owl-dot.active {
     animation: _width 200ms ease forwards running;
 }
 
-@keyframes _width{
-    0%{
+@keyframes _width {
+    0% {
         width: 15px
     }
-    100%{
+
+    100% {
         width: 35px
     }
 }
 
 
 /* clients */
+
+section.clients {
+    padding: 70px 7% 70px 7%;
+}
+
 section.clients .client {
     background: #FFFFFF00;
 }
@@ -542,7 +548,7 @@ section.clients .head {
     text-align: right;
 }
 
-section.clients .owl-carousel .owl-nav{
+section.clients .owl-carousel .owl-nav {
     display: block;
     position: absolute;
     top: -60px;
@@ -588,33 +594,35 @@ section.clients .client .client-review p {
 }
 
 /***  FOOTER  ***/
-footer.footer{
+footer.footer {
     display: block;
     width: 100%;
-    padding: 0px 7% 50px 7%;
+    padding: 50px 7% 50px 7%;
     overflow: hidden;
     text-align: center;
+    background: #2D253D
 }
 
-footer.footer .logo{
+footer.footer .logo {
     display: block;
     height: 100px;
     overflow: hidden;
 }
 
-footer.footer .logo img{
+footer.footer .logo img {
     height: 100%
 }
 
-footer.footer h3{
+footer.footer h3 {
     display: block;
     position: relative;
+    color: #DCDCDC;
     font-size: 30px;
     font-weight: 700;
     margin: 15px 0 35px 0;
 }
 
-footer.footer ul{
+footer.footer ul {
     margin: 20px 0;
 }
 
@@ -623,35 +631,37 @@ footer.footer ul li {
     margin: 0 10px;
 }
 
-footer.footer ul li a{
+footer.footer ul li a {
     display: block;
     width: 38px;
     height: 38px;
-    background: #2D253D;
-    border-radius: 19px;
     font-size: 24px;
-    color: #FFFFFF;
+    color: #E0E0E0;
     line-height: 1.7;
-    transition: background 150ms ease-out;
+    transition: color 150ms ease-out;
 }
 
-footer.footer ul li a:hover{
-    background: #008448
+footer.footer ul li a:hover {
+    color: #008448
+}
+
+footer.footer p {
+    color: #DCDCDC
 }
 
 footer.footer p .year,
-footer.footer p i.fa{
+footer.footer p i.fa {
     color: #008448;
     font-weight: 700;
 }
 
-footer.footer p a{
-   color: #008448;
-   text-decoration: none;
-   font-weight: 700;
-   transition: color 150ms ease-out;
+footer.footer p a {
+    color: #008448;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 150ms ease-out;
 }
 
-footer.footer p a:hover{
-    color: #212121
+footer.footer p a:hover {
+    color: #E0E0E0
 }
