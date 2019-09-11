@@ -50,4 +50,15 @@
     //* The clients slider
     _slider('.clients .owl-carousel', 1, 2, 2)
 
+
+    //* Facts Counter
+    function _count_facts() {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 700
+        })
+    }
+    _count_facts()
+
+
 })(jQuery)
