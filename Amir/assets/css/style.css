@@ -665,3 +665,77 @@ footer.footer p a {
 footer.footer p a:hover {
     color: #E0E0E0
 }
+
+/* facts */
+section.facts {
+    display: block;
+    width: 100%;
+    padding: 50px 7% 40px 7%;
+    overflow: hidden;
+    position: relative;
+}
+
+section.facts:after {
+    display: block;
+    content: "";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    background: linear-gradient(90deg, #1b6741, #119955, #1b6741, #119955);
+    z-index: -1;
+    animation: sliding 20000ms ease-out infinite running;
+}
+
+@keyframes sliding {
+    0% {
+        right: 0%
+    }
+
+    50% {
+        right: -50%
+    }
+
+    100% {
+        right: -100%
+    }
+}
+
+section.facts .head {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+section.facts .the-facts {
+    display: block;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+section.facts .the-facts .fact {
+    display: inline-block;
+    position: relative;
+    padding: 20px 40px;
+    background: #ffffff;
+    margin: 20px;
+    border-radius: 3px;
+}
+
+section.facts .the-facts .fact h4 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+section.facts .the-facts .fact p {
+    font-size: 17px;
+    color: #333333;
+    margin: 15px 0px 0px 0px;
+}
