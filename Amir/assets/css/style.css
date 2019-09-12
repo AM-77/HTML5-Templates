@@ -739,3 +739,62 @@ section.facts .the-facts .fact p {
     color: #333333;
     margin: 15px 0px 0px 0px;
 }
+
+/****** ABOUT PAGE ******/
+section.about_banner{
+    display: block;
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+}
+
+section.about_banner div{
+    display: block;
+    width: 100%;
+    height: 500px;
+    padding: 140px 7%;
+    background-image: url("../images/developer_activity.svg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+    text-align: center
+}
+/*
+section.about_banner div:before{
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+*/
+
+section.about_banner div h1{
+    font-size: 75px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+section.about_banner div p a{
+    font: 500 21px "Rubik", sans-serif;
+    color: #2D253D;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 250ms ease forwards;
+    -webkit-transition: color 250ms ease forwards;
+}
+
+section.about_banner div p a:hover {
+    color: #125C4B;
+}
+
+section.about_banner div p .fa{
+    margin: 0 10px;
+    position: relative;
+    top: -1px;
+}
+
