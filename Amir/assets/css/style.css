@@ -787,26 +787,20 @@ section.about_banner div p .fa {
 }
 
 /* who am I*/
-section.whoami,
-section.educations,
-section.experiences {
+section.whoami {
     display: block;
     width: 100%;
     padding: 60px 7%;
 }
 
-section.whoami .title,
-section.educations .title,
-section.experiences .title {
+section.whoami .title {
     display: block;
     width: 100%;
     text-align: center;
     padding: 25px 0;
 }
 
-section.whoami .title h1,
-section.educations .title h1,
-section.experiences .title h1 {
+section.whoami .title h1 {
     font-size: 55px;
     color: #2D253D;
     font-weight: 700;
@@ -863,78 +857,7 @@ section.whoami div.content p {
     padding: 20px 0;
 }
 
-
-/* educations / experiences */
-section.educations div.content,
-section.experiences div.content {
-    display: block;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-section.educations div.content {
-    padding-top: 40px
-}
-
-section.experiences div.content div.experience {
-    padding-top: 40px
-}
-
-section.educations div.content h1,
-section.experiences div.content h1 {
-    font-size: 25px;
-    color: #007940;
-    font-weight: 700;
-    text-transform: uppercase;
-
-}
-
-section.educations div.content h5,
-section.experiences div.content h5 {
-    display: inline-block;
-    font-size: 17px;
-    color: #007940;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 20px 0;
-    border-bottom: 2px dotted
-}
-
-section.educations div.content p,
-section.experiences div.content p {
-    color: #212121aa;
-    font-size: 19px;
-
-    line-height: 1.5;
-    padding: 20px 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*--------  End Skillbar Style  -------------*/
-
+/*** Qualifications  ***/
 section.qualifications {
     display: block;
     width: 100%;
@@ -992,19 +915,6 @@ section.qualifications .head p {
 
 .qualifications ul li .hidden{
     opacity: 0;
-}
-
-.qualifications ul li .show{
-    animation: show_content 250ms ease   forwards running;
-}
-
-@keyframes show_content{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
 }
 
 .qualifications ul li .content {
