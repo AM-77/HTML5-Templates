@@ -190,7 +190,7 @@ header.header {
     width: 100%;
     height: 60px;
     padding: 0 7%;
-
+    z-index: 99;
 }
 
 header.header.fixed {
@@ -246,8 +246,8 @@ header.header nav.navbar li a {
     color: #2D253D;
     text-decoration: none;
     font-weight: 700;
-    transition: color 250ms ease forwards;
-    -webkit-transition: color 250ms ease forwards;
+    transition: color 250ms ease;
+    -webkit-transition: color 250ms ease;
 }
 
 header.header nav.navbar li a:hover {
@@ -426,7 +426,7 @@ section.clients .client {
     box-shadow: 0px 0px 4px -1px #008448;
     border-radius: 3px;
     cursor: pointer;
-    transition: box-shadow 250ms ease forwards;
+    transition: box-shadow 250ms ease;
 }
 
 section.services .service:hover,
@@ -741,60 +741,315 @@ section.facts .the-facts .fact p {
 }
 
 /****** ABOUT PAGE ******/
-section.about_banner{
+section.about_banner {
     display: block;
     width: 100%;
     min-height: 500px;
     position: relative;
+    background-image: url("../images/developer_activity.svg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
 }
 
-section.about_banner div{
+section.about_banner div.content {
     display: block;
     width: 100%;
     height: 500px;
     padding: 140px 7%;
-    background-image: url("../images/developer_activity.svg");
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover; 
-    text-align: center
+    z-index: 2;
 }
-/*
-section.about_banner div:before{
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #212121;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-}
-*/
 
-section.about_banner div h1{
+section.about_banner div h1 {
     font-size: 75px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-section.about_banner div p a{
+section.about_banner div p a {
     font: 500 21px "Rubik", sans-serif;
     color: #2D253D;
     text-decoration: none;
     font-weight: 700;
-    transition: color 250ms ease forwards;
-    -webkit-transition: color 250ms ease forwards;
+    transition: all 250ms ease;
+    -webkit-transition: all 250ms ease;
 }
 
 section.about_banner div p a:hover {
-    color: #125C4B;
+    border-bottom: 3px solid #2D253D;
 }
 
-section.about_banner div p .fa{
+section.about_banner div p .fa {
     margin: 0 10px;
     position: relative;
     top: -1px;
 }
 
+/* who am I*/
+section.whoami,
+section.educations,
+section.experiences {
+    display: block;
+    width: 100%;
+    padding: 60px 7%;
+}
+
+section.whoami .title,
+section.educations .title,
+section.experiences .title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+}
+
+section.whoami .title h1,
+section.educations .title h1,
+section.experiences .title h1 {
+    font-size: 55px;
+    color: #2D253D;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+section.whoami div.myimage {
+    display: block;
+    width: 50%;
+    float: right;
+    overflow: hidden;
+    padding: 50px;
+}
+
+section.whoami div.myimage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px -1px #2D253D;
+}
+
+section.whoami div.content {
+    display: block;
+    width: 50%;
+    float: left;
+    padding: 70px;
+}
+
+
+section.whoami div.content h1 {
+    font-size: 45px;
+    color: #007940;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+section.whoami div.content h5 {
+    display: inline-block;
+    font-size: 17px;
+    color: #007940;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+    border-bottom: 2px dotted
+}
+
+section.whoami div.content p {
+    color: #212121aa;
+    font-size: 19px;
+    text-indent: 25px;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+
+/* educations / experiences */
+section.educations div.content,
+section.experiences div.content {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.educations div.content {
+    padding-top: 40px
+}
+
+section.experiences div.content div.experience {
+    padding-top: 40px
+}
+
+section.educations div.content h1,
+section.experiences div.content h1 {
+    font-size: 25px;
+    color: #007940;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+section.educations div.content h5,
+section.experiences div.content h5 {
+    display: inline-block;
+    font-size: 17px;
+    color: #007940;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+    border-bottom: 2px dotted
+}
+
+section.educations div.content p,
+section.experiences div.content p {
+    color: #212121aa;
+    font-size: 19px;
+
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------  End Skillbar Style  -------------*/
+
+section.qualifications {
+    display: block;
+    width: 100%;
+    padding: 60px 7%;
+}
+
+section.qualifications .head {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 70px
+}
+
+section.qualifications .head h1 {
+    font-size: 55px;
+    color: #2D253D;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+section.qualifications .head p {
+    font-size: 18px;
+    color: #212121;
+    line-height: 3
+}
+
+.qualifications ul li {
+    background: #dddde0;
+    position: relative;
+    margin: 0 auto;
+    width: 2px;
+    padding-bottom: 40px;
+    list-style-type: none;
+}
+
+.qualifications ul li:last-child {
+    padding-bottom: 7px;
+}
+
+.qualifications ul li:before {
+    content: '';
+    background: #007940;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border: 5px solid #eee;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.qualifications ul li .hidden{
+    opacity: 0;
+}
+
+.qualifications ul li .show{
+    animation: show_content 250ms ease   forwards running;
+}
+
+@keyframes show_content{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.qualifications ul li .content {
+    background-color: white !important;
+    box-shadow: 0px 0px 8px -4px #2D253D;
+    position: relative;
+    border-radius: 3px;
+    top: 7px;
+    width: 360px;
+    padding: 30px;
+    opacity: 0;
+}
+
+.qualifications ul li .content h4 {
+    padding-bottom: 10px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: #2D253D;
+}
+
+.qualifications ul li .content p {
+    line-height: 1.2;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.qualifications ul li .content p b {
+    color: #007940;
+    font-weight: 700;
+}
+
+.qualifications ul li:nth-child(odd) .content {
+    left: 50px;
+    text-align: left
+}
+
+.qualifications ul li:nth-child(odd) .content:before {
+    left: -38px;
+}
+
+.qualifications ul li:nth-child(even) .content {
+    left: calc(-360px - 45px);
+    text-align: right
+}
+
+.qualifications ul li:nth-child(even) .content:before {
+    right: -38px;
+}

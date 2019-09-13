@@ -53,12 +53,36 @@
 
     //* Facts Counter
     function _count_facts() {
-        $('.counter').counterUp({
-            delay: 10,
-            time: 700
-        })
+        if ($(".facts")) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 700
+            })
+        }
     }
     _count_facts()
+
+
+    //* Qualifications content
+    function _show_content() {
+        $(window).scroll(function () {
+            //* Check the location of each element hidden 
+            $('.qualifications .content').each(function (i) {
+
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                //* If the object is completely visible in the window, fadeIn it 
+                if (bottom_of_window > bottom_of_object) {
+                    $(this).animate({
+                        'opacity': '1'
+                    }, 700)
+                }
+            })
+        })
+    }
+    _show_content()
+
 
 
 })(jQuery)
