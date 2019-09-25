@@ -759,6 +759,7 @@ section.about_banner div.content {
     height: 500px;
     padding: 140px 7%;
     z-index: 2;
+    background: #02020221
 }
 
 section.about_banner div h1 {
@@ -777,7 +778,7 @@ section.about_banner div p a {
 }
 
 section.about_banner div p a:hover {
-    border-bottom: 3px solid #2D253D;
+    color: #000000;
 }
 
 section.about_banner div p .fa {
@@ -952,7 +953,7 @@ section.qualifications .head p {
 }
 
 .qualifications ul li:nth-child(odd) .content:before {
-    left: -38px;
+    left: -38px
 }
 
 .qualifications ul li:nth-child(even) .content {
@@ -961,5 +962,5 @@ section.qualifications .head p {
 }
 
 .qualifications ul li:nth-child(even) .content:before {
-    right: -38px;
+    right: -38px
 }
