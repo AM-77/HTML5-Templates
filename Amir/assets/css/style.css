@@ -683,7 +683,7 @@ section.facts:after {
     position: absolute;
     top: 0;
     right: 0%;
-    background: linear-gradient(90deg, #1b6741, #119955, #1b6741, #119955);
+    background: linear-gradient(90deg, #125C4B, #119955, #125C4B, #119955);
     z-index: -1;
     animation: sliding 20000ms ease-out infinite running;
 }
@@ -859,30 +859,39 @@ section.whoami div.content p {
 }
 
 /*** Qualifications  ***/
-section.qualifications {
+section.qualifications,
+section.testimonials,
+section.skills {
     display: block;
     width: 100%;
     padding: 60px 7%;
 }
 
-section.qualifications .head {
+section.qualifications .head,
+section.testimonials .head,
+section.skills .head {
     display: block;
     width: 100%;
     text-align: center;
     margin-bottom: 70px
 }
 
-section.qualifications .head h1 {
+section.qualifications .head h1,
+section.testimonials .head h3,
+section.skills .head h3 {
     font-size: 55px;
     color: #2D253D;
     font-weight: 700;
-    text-transform: uppercase
+    text-transform: uppercase;
+    margin-bottom: 25px
 }
 
-section.qualifications .head p {
-    font-size: 18px;
+section.qualifications .head p,
+section.testimonials .head p,
+section.skills .head p {
+    font-size: 17px;
     color: #212121;
-    line-height: 3
+    line-height: 1.5
 }
 
 .qualifications ul li {
@@ -914,7 +923,7 @@ section.qualifications .head p {
     border-radius: 50%;
 }
 
-.qualifications ul li .hidden{
+.qualifications ul li .hidden {
     opacity: 0;
 }
 
@@ -963,4 +972,75 @@ section.qualifications .head p {
 
 .qualifications ul li:nth-child(even) .content:before {
     right: -38px
+}
+
+/* skills */
+
+section.skills .tools_expert {
+    width: 80%;
+    margin: 0 auto
+}
+
+section.skills .tools_expert .skill_main .skill_item {
+    margin-bottom: 18px;
+}
+
+section.skills .tools_expert .skill_main .skill_item:last-child {
+    margin-bottom: 0px;
+}
+
+section.skills .tools_expert .skill_main .skill_item h4 {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2D253D;
+    margin-bottom: 15px;
+}
+
+.tools_expert .skill_main .skill_item .progress {
+    height: 15px;
+    border-radius: 7px;
+    background: transparent;
+    border: 1px solid #eeeeee;
+    box-shadow: 0px 2px 1px -2px rgb(94, 94, 95);
+}
+
+section.skills .tools_expert .skill_main .skill_item .progress .progress-bar {
+    width: 0%;
+    transition: width .6s ease;
+    height: 14px;
+    border-radius: 7px;
+    vertical-align: middle;
+    align-self: center;
+    background-image: -moz-linear-gradient(0deg,  #125C4B 0%, #119955  100%);
+    background-image: -webkit-linear-gradient(0deg,  #125C4B 0%, #119955 100%);
+    background-image: -ms-linear-gradient(0deg,  #125C4B 0%, #119955 100%);
+}
+
+/* testimonials */
+
+section.testimonials .owl-carousel .owl-nav {
+    display: block;
+    width: 130px;
+    position: absolute;
+    top: 57px;
+    left: -80px;
+    transform: rotate(90deg)
+}
+
+section.testimonials .owl-carousel .owl-nav .owl-prev,
+section.testimonials .owl-carousel .owl-nav .owl-next {
+    display: inline-block;
+    font-size: 35px;
+    padding: 5px 8px;
+    color: #008448;
+    margin-left: 10px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    border: 1px solid #0084485c;
+}
+
+section.testimonials .owl-carousel .owl-nav .owl-prev {
+    margin-left: 0px;
+    margin-right: 10px;
 }
