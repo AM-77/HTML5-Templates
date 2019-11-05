@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amir</title>
+    <link rel="stylesheet" href="./assets/vendors/linericon/style.css">
+    <link rel="stylesheet" href="./assets/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!--  header  -->
+        <header class="header">
+            <div class="logo">
+                <a href="./index.html"><img src="./assets/images/logo.png" alt="amir's website logo"></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./services.html">SERVICES</a></li>
+                    <li><a href="./portfolio.html">PORTFOLIO</a></li>
+                    <li><a class="current" href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--  banner  -->
+        <section class="about_banner _banner">
+            <div class="content">
+                <div class="background">
+                    <img src="./assets/images/contact.svg" alt="">
+                </div>
+                <h1>CONTACT</h1>
+                <p><a href="./index.html">HOME</a><span class="fa fa-chevron-right"></span><a
+                        href="./contact.htmL">CONTACT</a></p>
+            </div>
+        </section>
+
+        <!--  map  -->
+        <section class="map">
+            <div class="title">
+                <h1>LOCATION</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, fugiat eius ad exercitationem
+                    voluptatum </p>
+            </div>
+            <div class="content">
+                <div id="map" style="height: 480px;"></div>
+            </div>
+        </section>
+
+        <!--  form  -->
+        <section class="email-us">
+            <div class="title">
+                <h1>EMAIL US</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, fugiat eius ad exercitationem
+                    voluptatum </p>
+            </div>
+            <div class="content">
+                <div class="infos">
+                    <ul>
+                        <li>
+                            <span class="icon"><i class="lnr lnr-home"></i></span>
+                            <span class="info">Boumerdes, Algeria <i>Ouled Moussa</i></span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="lnr lnr-phone-handset"></i></span>
+                            <span class="info">00 (213) 986 556 270 <i>Mon to Fri 9am to 6 pm</i></span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="lnr lnr-envelope"></i></span>
+                            <span class="info">contant@mail.com <i>Send us an email anytime</i></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form">
+                    
+                    <form>
+                        <input class="name" type="text" name="name" placeholder="Enter your name">
+                        <input class="email" type="email" name="name" placeholder="Enter email address">
+                        <input class="subject" type="text" name="name" placeholder="Enter subject">
+                        <textarea class="message" name="message" placeholder="Enter Message"></textarea>
+                        <button class="send">Send</button>
+                    </form><div class="alert">
+                        <p>Your email has been sent.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  footer  -->
+        <footer class="footer">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="amir's logo">
+            </div>
+            <h3>FOLLOW ME</h3>
+            <ul>
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-bitbucket"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-xing"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+            </ul>
+            <p>
+                Copyright <span class="year">&copy;<script>
+                        document.write(new Date().getFullYear());
+                    </script></span> All rights reserved | This template is made with <i class="fa fa-code"></i> by <a
+                    href="https://github.com/AM-77">AM-77</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="./assets/js/jquery-2.2.4.min.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="./assets/vendors/gsap/TweenMax.min.js"></script>
+    <script src="./assets/vendors/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="./assets/vendors/scrollmagic/animation.gsap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+
+    <script>
+        function initMap() {
+            var myLatLng = {
+                lat: 36.676823,
+                lng: 3.388270
+            };
+
+            var grayStyles = [{
+                    featureType: "all",
+                    stylers: [{
+                            saturation: -90
+                        },
+                        {
+                            lightness: 50
+                        }
+                    ]
+                },
+                {
+                    elementType: 'labels.text.fill',
+                    stylers: [{
+                        color: '#A3A3A3'
+                    }]
+                }
+            ];
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: myLatLng,
+                styles: grayStyles,
+                scrollwheel: false
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hola! I\'m here.'
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKdgQHydxT0480sTymRqYcnujl0nMyTm8&callback=initMap"
+        async defer></script>
+</body>
+
+</html>
