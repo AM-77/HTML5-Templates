@@ -1,0 +1,95 @@
+:root{
+    --bread-color: #8A331B
+}
+
+body{
+    font-family: "source sans pro"
+}
+
+.text-bread{
+    color: var(--bread-color) !important
+}
+
+.bread{
+    background-color: var(--bread-color) !important
+}
+
+.capitalize{
+    text-transform: capitalize !important
+}
+
+.uppercase{
+    text-transform: uppercase !important
+}
+
+.header{
+    font-weight: 700
+}
+
+.material-icons{
+    color: var(--bread-color) !important
+}
+
+.brand-logo{
+    height: inherit
+}
+
+.img-h{
+    display: block;
+    height: 100%;
+}
+
+.img-w{
+    display: block;
+    width: 100%;
+}
+
+.overflow-h{
+    overflow: hidden !important
+}
+
+.user-view{
+    overflow: hidden;
+    text-align: center;
+}
+
+.user-view .background{
+    width: inherit;
+}
+
+.user-view .background img{
+   height: 100%;
+}
+
+.user-view .background::before,
+.parallax-container .parallax::after{
+   content: "";
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: #00000050;
+}
+
+.user-view .sidenav-img{
+    width:100%;
+}
+
+.center-div{
+    margin: 0 auto
+}
+
+.parallax-header{
+    margin-top: 20px;
+}
+
+.parallax-header .divider{
+    height: 3px;
+}
+
+.parallax-header p,
+.parallax-header h1{
+    font-weight: 700
+}
