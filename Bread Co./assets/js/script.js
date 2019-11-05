@@ -7,7 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let sidNav = document.querySelector('.sidenav')
     M.Sidenav.init(sidNav, {})
 
-    let elems = document.querySelectorAll('.parallax')
-    let instances = M.Parallax.init(elems, {})
+    let parallax = document.querySelectorAll('.parallax')
+    M.Parallax.init(parallax, {})
+
+    let carousel = document.querySelectorAll('.carousel');
+    M.Carousel.init(carousel, {
+        fullWidth: false,
+        dist: -100,
+        numVisible: 5
+    });
 
 })

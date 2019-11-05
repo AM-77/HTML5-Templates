@@ -22,7 +22,7 @@ body{
     text-transform: uppercase !important
 }
 
-.header{
+.bold{
     font-weight: 700
 }
 
@@ -92,4 +92,35 @@ body{
 .parallax-header p,
 .parallax-header h1{
     font-weight: 700
+}
+
+.carousel .review-item{
+    width: 70%;
+    max-width: 450px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 3px;
+    padding: 25px;
+}
+
+.carousel a.review-item{
+    color: #212121 !important
+}
+
+.parallax-container.reviews{
+    height: auto 
+}
+
+.single-item{
+    margin: 50px 0;
+}
+
+.single-item .thumb{
+    display: inline-block;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%
 }
