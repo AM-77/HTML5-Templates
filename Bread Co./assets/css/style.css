@@ -124,3 +124,37 @@ body{
     height: 200px;
     border-radius: 50%
 }
+
+.footer-copyright{
+    background-color: rgba(0, 0, 0, 0.5) !important
+}
+
+.page-footer .input-field .material-icons{
+    color: #FFFFFF !important;
+    transition: color 250ms ease
+}
+
+.input-field input{
+    color: #000 !important;
+    border-bottom-color: #FFF !important;
+    box-shadow: 0 1px 0 0 #FFF !important;
+}
+
+.input-field label{
+    color: #FFF !important
+}
+
+ul.footer-socail-icons{
+    padding: 0
+}
+
+ul.footer-socail-icons li{
+    display: inline-block;
+}
+
+ul.footer-socail-icons li a{
+    display: block;
+    width: 40px;
+    margin: 0 auto
+}
+      
