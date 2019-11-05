@@ -1,85 +1,5 @@
 /* RESET CSS */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -88,17 +8,7 @@ video {
     vertical-align: baseline;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
@@ -106,20 +16,15 @@ body {
     line-height: 1;
 }
 
-ol,
-ul {
+ol, ul {
     list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
     quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
 }
@@ -143,25 +48,20 @@ input::-moz-focus-inner {
     padding: 0;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-appearance: none;
     appearance: none;
 }
 
-html,
-body {
+html, body {
     font-family: Rubik;
     color: #2D253D;
     box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
@@ -271,8 +171,7 @@ header.header nav.navbar li a.current:after {
 }
 
 /***  BANNER & INTRO ***/
-section.banner,
-section.intro {
+section.banner, section.intro {
     display: block;
     padding: 190px 7% 120px 7%;
 }
@@ -281,8 +180,7 @@ section.intro {
     padding-top: 50px;
 }
 
-section.banner .title,
-section.intro .introduction {
+section.banner .title, section.intro .introduction {
     display: inline-block;
 }
 
@@ -318,36 +216,32 @@ section.banner .title p {
     margin: 35px 0;
 }
 
-section.banner .title button,
-section.intro .introduction button {
+section.banner .title button, section.intro .introduction button {
     display: inline-block;
     width: 130px;
     height: 45px;
-    background: linear-gradient(90deg, #119955, #125C4B);
-    border: 0px solid #125C4B;
+    background-image: linear-gradient(90deg, #119955, #125C4B);
+    border: 1px solid transparent;
     border-radius: 3px;
     color: #E0E0E0;
     font-family: Rubik;
     font-size: 15px;
     cursor: pointer;
     box-shadow: 0px 8px 12px -8px #125C4B;
-    transition: all 150ms ease;
+    transition: all 450ms ease;
 }
 
-section.banner .title button:first-child,
-section.intro .introduction button:first-child {
+section.banner .title button:first-child, section.intro .introduction button:first-child {
     margin-right: 25px;
 }
 
-section.banner .title button:hover,
-section.intro .introduction button:hover {
-    color: #125C4B;
-    background: #E0E0E0;
+section.banner .title button:hover, section.intro .introduction button:hover {
+    color: #031712;
+    border: 1px solid #031712;
     box-shadow: 0px 0px 0px 0px #125C4B;
 }
 
-section.banner .image,
-section.intro .image {
+section.banner .image, section.intro .image {
     display: inline-block;
     float: right;
     width: 50%;
@@ -358,8 +252,7 @@ section.intro .image {
     float: none;
 }
 
-section.banner .image img,
-section.intro .image img {
+section.banner .image img, section.intro .image img {
     display: block;
     width: 100%;
 }
@@ -387,30 +280,26 @@ section.intro .introduction p {
 }
 
 /***  SERVICES & CLIENTS  ***/
-section.services,
-section.clients {
+section.services, section.clients {
     display: block;
     width: 100%;
     padding: 70px 7% 120px 7%;
     overflow: hidden;
 }
 
-section.services .head,
-section.clients .head {
+section.services .head, section.clients .head {
     display: block;
     text-align: left;
 }
 
-section.services .head h3,
-section.clients .head h3 {
+section.services .head h3, section.clients .head h3 {
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-section.services .head p,
-section.clients .head p {
+section.services .head p, section.clients .head p {
     font-family: "Source sans pro";
     font-size: 16px;
     line-height: 1.5;
@@ -418,8 +307,7 @@ section.clients .head p {
     color: #777777;
 }
 
-section.services .service,
-section.clients .client {
+section.services .service, section.clients .client {
     display: block;
     background: #FFFFFF;
     padding: 25px 35px;
@@ -429,33 +317,28 @@ section.clients .client {
     transition: box-shadow 250ms ease;
 }
 
-section.services .service:hover,
-section.clients .client:hover {
+section.services .service:hover, section.clients .client:hover {
     box-shadow: 0px 0px 1px 0px #008448;
 }
 
-section.services .service .service-image,
-section.clients .client .client-image {
+section.services .service .service-image, section.clients .client .client-image {
     display: inline-block;
     width: 100%;
     max-height: 150px;
 }
 
-section.services .service .service-image img,
-section.clients .client .client-image img {
+section.services .service .service-image img, section.clients .client .client-image img {
     display: block;
     width: 100%;
     max-height: 100px;
 }
 
-section.services .service .service-discription,
-section.clients .client .client-review {
+section.services .service .service-discription, section.clients .client .client-review {
     display: inline-block;
     width: 100%;
 }
 
-section.services .service .service-discription h4,
-section.clients .client .client-review h4 {
+section.services .service .service-discription h4, section.clients .client .client-review h4 {
     text-align: center;
     font-size: 20px;
     font-weight: 700;
@@ -463,50 +346,43 @@ section.clients .client .client-review h4 {
     padding: 25px 0 15px 0;
 }
 
-section.services .service .service-discription p,
-section.clients .client .client-review p {
+section.services .service .service-discription p, section.clients .client .client-review p {
     color: #828282;
     text-align: center;
     font-size: 16px;
     line-height: 1.4
 }
 
-section.services .owl-carousel .owl-stage-outer,
-section.clients .owl-carousel .owl-stage-outer {
+section.services .owl-carousel .owl-stage-outer, section.clients .owl-carousel .owl-stage-outer {
     overflow: visible;
     position: relative;
 }
 
-section.services .owl-carousel .owl-nav,
-section.clients .owl-carousel .owl-nav {
+section.services .owl-carousel .owl-nav, section.clients .owl-carousel .owl-nav {
     display: block;
     position: absolute;
     top: -60px;
     right: 0px
 }
 
-section.services .owl-carousel .owl-nav .owl-next,
-section.clients .owl-carousel .owl-nav .owl-next {
+section.services .owl-carousel .owl-nav .owl-next, section.clients .owl-carousel .owl-nav .owl-next {
     display: inline-block;
     font-size: 45px;
     color: #008448;
 }
 
-section.services .owl-carousel .owl-nav .owl-prev,
-section.clients .owl-carousel .owl-nav .owl-prev {
+section.services .owl-carousel .owl-nav .owl-prev, section.clients .owl-carousel .owl-nav .owl-prev {
     display: none;
 }
 
-section.services .owl-carousel .owl-dots,
-section.clients .owl-carousel .owl-dots {
+section.services .owl-carousel .owl-dots, section.clients .owl-carousel .owl-dots {
     display: block;
     height: 15px;
     margin-top: 25px;
     text-align: center;
 }
 
-section.services .owl-carousel .owl-dots .owl-dot,
-section.clients .owl-carousel .owl-dots .owl-dot {
+section.services .owl-carousel .owl-dots .owl-dot, section.clients .owl-carousel .owl-dots .owl-dot {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -516,8 +392,7 @@ section.clients .owl-carousel .owl-dots .owl-dot {
     background: #cccccc;
 }
 
-section.services .owl-carousel .owl-dots .owl-dot.active,
-section.clients .owl-carousel .owl-dots .owl-dot.active {
+section.services .owl-carousel .owl-dots .owl-dot.active, section.clients .owl-carousel .owl-dots .owl-dot.active {
     background: #008448;
     animation: _width 200ms ease forwards running;
 }
@@ -532,9 +407,7 @@ section.clients .owl-carousel .owl-dots .owl-dot.active {
     }
 }
 
-
 /* clients */
-
 section.clients {
     padding: 70px 7% 70px 7%;
 }
@@ -649,8 +522,7 @@ footer.footer p {
     color: #DCDCDC
 }
 
-footer.footer p .year,
-footer.footer p i.fa {
+footer.footer p .year, footer.footer p i.fa {
     color: #008448;
     font-weight: 700;
 }
@@ -741,34 +613,49 @@ section.facts .the-facts .fact p {
 }
 
 /****** ABOUT PAGE ******/
-section.about_banner {
+section.about_banner, section.services_banner {
     display: block;
     width: 100%;
     min-height: 500px;
     position: relative;
-    background-image: url("../images/developer_activity.svg");
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    text-align: center;
 }
 
-section.about_banner div.content {
+section.about_banner div.content, section.services_banner div.content {
     display: block;
     width: 100%;
     height: 500px;
     padding: 140px 7%;
     z-index: 2;
-    background: #02020221
+    background: #ffffff24;
+    text-align: center
 }
 
-section.about_banner div h1 {
+section.about_banner div.content .background, section.services_banner div.content .background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 50px 10%;
+    text-align: center;
+    z-index: -1;
+    overflow: hidden;
+}
+
+section.about_banner div.content .background img, section.services_banner div.content .background img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section.about_banner div h1, section.services_banner div h1 {
     font-size: 75px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-section.about_banner div p a {
+section.about_banner div p a, section.services_banner div p a {
     font: 500 21px "Rubik", sans-serif;
     color: #2D253D;
     text-decoration: none;
@@ -777,11 +664,11 @@ section.about_banner div p a {
     -webkit-transition: all 250ms ease;
 }
 
-section.about_banner div p a:hover {
-    color: #000000;
+section.about_banner div p a:hover, section.services_banner div p a:hover {
+    color: #119955;
 }
 
-section.about_banner div p .fa {
+section.about_banner div p .fa, section.services_banner div p .fa {
     margin: 0 10px;
     position: relative;
     top: -1px;
@@ -831,13 +718,11 @@ section.whoami div.content {
     padding: 70px;
 }
 
-
 section.whoami div.content h1 {
     font-size: 45px;
     color: #007940;
     font-weight: 700;
     text-transform: uppercase;
-
 }
 
 section.whoami div.content h5 {
@@ -859,26 +744,20 @@ section.whoami div.content p {
 }
 
 /*** Qualifications  ***/
-section.qualifications,
-section.testimonials,
-section.skills {
+section.qualifications, section.testimonials, section.skills {
     display: block;
     width: 100%;
     padding: 60px 7%;
 }
 
-section.qualifications .head,
-section.testimonials .head,
-section.skills .head {
+section.qualifications .head, section.testimonials .head, section.skills .head {
     display: block;
     width: 100%;
     text-align: center;
     margin-bottom: 70px
 }
 
-section.qualifications .head h1,
-section.testimonials .head h3,
-section.skills .head h3 {
+section.qualifications .head h1, section.testimonials .head h3, section.skills .head h3 {
     font-size: 55px;
     color: #2D253D;
     font-weight: 700;
@@ -886,9 +765,7 @@ section.skills .head h3 {
     margin-bottom: 25px
 }
 
-section.qualifications .head p,
-section.testimonials .head p,
-section.skills .head p {
+section.qualifications .head p, section.testimonials .head p, section.skills .head p {
     font-size: 17px;
     color: #212121;
     line-height: 1.5
@@ -975,7 +852,6 @@ section.skills .head p {
 }
 
 /* skills */
-
 section.skills .tools_expert {
     width: 80%;
     margin: 0 auto
@@ -1012,13 +888,12 @@ section.skills .tools_expert .skill_main .skill_item .progress .progress-bar {
     border-radius: 7px;
     vertical-align: middle;
     align-self: center;
-    background-image: -moz-linear-gradient(0deg,  #125C4B 0%, #119955  100%);
-    background-image: -webkit-linear-gradient(0deg,  #125C4B 0%, #119955 100%);
-    background-image: -ms-linear-gradient(0deg,  #125C4B 0%, #119955 100%);
+    background-image: -moz-linear-gradient(0deg, #125C4B 0%, #119955 100%);
+    background-image: -webkit-linear-gradient(0deg, #125C4B 0%, #119955 100%);
+    background-image: -ms-linear-gradient(0deg, #125C4B 0%, #119955 100%);
 }
 
 /* testimonials */
-
 section.testimonials .owl-carousel .owl-nav {
     display: block;
     width: 130px;
@@ -1028,8 +903,7 @@ section.testimonials .owl-carousel .owl-nav {
     transform: rotate(90deg)
 }
 
-section.testimonials .owl-carousel .owl-nav .owl-prev,
-section.testimonials .owl-carousel .owl-nav .owl-next {
+section.testimonials .owl-carousel .owl-nav .owl-prev, section.testimonials .owl-carousel .owl-nav .owl-next {
     display: inline-block;
     font-size: 35px;
     padding: 5px 8px;
@@ -1043,4 +917,650 @@ section.testimonials .owl-carousel .owl-nav .owl-next {
 section.testimonials .owl-carousel .owl-nav .owl-prev {
     margin-left: 0px;
     margin-right: 10px;
+}
+
+/** services **/
+section.offers, section.services-testimonials {
+    display: block;
+    width: 100%;
+    padding: 60px 7%;
+}
+
+section.offers div.title, section.services-testimonials div.title {
+    display: block;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+section.offers .title h1, section.services-testimonials .title h1 {
+    font-size: 55px;
+    color: #2D253D;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+section.offers div.title p, section.services-testimonials .title p {
+    color: #212121aa;
+    font-size: 19px;
+    text-indent: 25px;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+section.offers .services {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+section.offers .services .service {
+    display: block;
+    background: #FFFFFF;
+    padding: 25px 35px;
+    box-shadow: 0px 0px 1px 0px #008448;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: box-shadow 250ms ease;
+    width: 48%;
+    float: left;
+    margin-top: 50px;
+}
+
+section.offers .services .service:nth-child(odd) {
+    margin-right: 2%;
+}
+
+section.offers .services .service:nth-child(even) {
+    margin-left: 2%;
+}
+
+section.offers .services .service:hover {
+    box-shadow: 0px 0px 7px -1px #008448;
+}
+
+section.offers .services .service .service-image {
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+}
+
+section.offers .services .service .service-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section.offers.services .service .service-discription {
+    display: inline-block;
+    width: 100%;
+}
+
+section.offers .services .service .service-discription h4 {
+    text-align: center;
+    font-size: 37px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 25px 0 15px 0;
+}
+
+section.offers .services .service .service-discription p {
+    color: #5f5d5d;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4
+}
+
+section.services-testimonials .content {
+    text-align: center;
+    margin: 30px 0;
+}
+
+section.services-testimonials .testimonial .image {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    padding: 5px;
+    border-radius: 100%;
+    border: 4px solid #2D253D;
+}
+
+section.services-testimonials .testimonial .image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+section.services-testimonials .testimonial .review {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px 30px 10px 30px;
+}
+
+section.services-testimonials .testimonial .review .quote {
+    display: inline-block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -20px;
+    left: 70px;
+}
+
+section.services-testimonials .testimonial .review p {
+    text-indent: 70px;
+    color: #5f5d5d;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4
+}
+
+section.services-testimonials .testimonial .review h4 {
+    text-align: center;
+    font-size: 37px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 50px 0 0 0;
+}
+
+section.services-testimonials .testimonial ul.starts {
+    display: block;
+}
+
+section.services-testimonials .testimonial ul.starts li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+section.services-testimonials .testimonial ul.starts li i {
+    color: #bbbb1f;
+    font-size: 21px;
+}
+
+section.services-testimonials .owl-next, section.services-testimonials .owl-prev {
+    font-size: 50px;
+    transition: all 250ms ease;
+    position: relative;
+    top: -100px;
+}
+
+section.services-testimonials .owl-next:hover, section.services-testimonials .owl-prev:hover {
+    color: #008448;
+}
+
+section.services-testimonials .owl-next {
+    float: right;
+}
+
+section.services-testimonials .owl-prev {
+    float: left;
+}
+
+/**  portfolio  **/
+section.portfolio {
+    display: block;
+    width: 100%;
+    padding: 60px 7%;
+}
+
+section.portfolio div.title, section.portfolio .content {
+    display: block;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+section.portfolio .content {
+    width: 85%;
+    padding-bottom: 120px;
+}
+
+section.portfolio .title h1 {
+    font-size: 55px;
+    color: #2D253D;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+section.portfolio div.title p {
+    color: #212121aa;
+    font-size: 19px;
+    text-indent: 25px;
+    line-height: 1.5;
+    padding: 20px 0;
+    padding-bottom: 60px
+}
+
+section.portfolio .content .portfolio-filter {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 50px;
+}
+
+section.portfolio .content .portfolio-filter ul {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 20px 0;
+}
+
+section.portfolio .content .portfolio-filter ul li {
+    display: block;
+    position: relative;
+    height: 100%;
+    float: left;
+    font-size: 18px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+section.portfolio .content .portfolio-filter ul li:hover {
+    color: #008448
+}
+
+section.portfolio .content .portfolio-filter ul li.active {
+    font-weight: 700;
+}
+
+section.portfolio .content .filters-content {
+    text-align: center;
+    overflow: hidden;
+}
+
+section.portfolio .content .filters-content .all {
+    padding: 0 40px;
+    border-radius: 3px;
+}
+
+section.portfolio .content .portfolio-image {
+    position: relative;
+    cursor: pointer;
+}
+
+.single-portfolio {
+    position: relative;
+    padding-bottom: 10%
+}
+
+section.portfolio .content .filters-content .info {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 90%;
+    width: 100%;
+    background: #297e4a;
+    opacity: 0;
+    border-radius: 5px;
+    transition: all 450ms ease;
+    text-align: left;
+}
+
+section.portfolio .content .filters-content .info:hover {
+    top: 25px;
+    left: 25px;
+    opacity: .9;
+}
+
+section.portfolio .content .filters-content .info h4 {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+section.portfolio .content .filters-content .info p {
+    margin: 5px 0 10px 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+}
+
+section.portfolio .content .filters-content .info a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #E0E0E0;
+    font-size: 14px;
+    font-weight: 700;
+    width: auto;
+}
+
+section.portfolio .content .filters-content .info .content {
+    text-align: left;
+    position: relative;
+    top: 55%;
+    left: 90px;
+    opacity: 0;
+    transition: all 450ms ease;
+}
+
+section.portfolio .content .filters-content .info:hover .content {
+    top: 65%;
+    left: 40px;
+    opacity: 1;
+}
+
+section.brands {
+    display: block;
+    width: 90%;
+    height: 70px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+section.brands ul {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+section.brands ul li {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+section.details {
+}
+
+/**  portfolio details  **/
+section.portfolio-details {
+    display: block;
+    width: 100%;
+    padding: 60px 7%;
+}
+
+section.portfolio-details div.title, section.portfolio-details .content {
+    display: block;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+section.portfolio-details .content {
+    width: 70%;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+section.portfolio-details .title h1 {
+    font-size: 55px;
+    color: #2D253D;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+section.portfolio-details .title p {
+    color: #212121aa;
+    font-size: 19px;
+    text-indent: 25px;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+section.portfolio-details .content .project-image {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+section.portfolio-details .content .project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section.portfolio-details .content .description {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+section.portfolio-details .content .description .details {
+    display: block;
+    width: 70%;
+    text-align: justify;
+    text-indent: 50px;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #676767;
+    float: left;
+    padding: 0 20px;
+    margin-bottom: 100px;
+}
+
+section.portfolio-details .content .description .infos {
+    display: block;
+    width: 30%;
+    font-size: 18px;
+    line-height: 1.3;
+    float: left;
+    padding: 20px;
+    text-align: left;
+}
+
+section.portfolio-details .content .description .infos h3 {
+    font-size: 20px;
+    color: #297e4a;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+section.portfolio-details .content .description .infos p {
+    font-size: 15px;
+}
+
+section.portfolio-details .content .description .infos ul.table {
+    margin: 25px 0
+}
+
+section.portfolio-details .content .description .infos ul.table > li {
+    display: inline-block;
+    line-height: 1.9;
+    width: 100%;
+}
+
+section.portfolio-details .content .description .infos ul.table li .title {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #297e4a
+}
+
+section.portfolio-details .content .description .infos ul.table li ul.starts {
+    display: inline-block;
+}
+
+section.portfolio-details .content .description .infos ul.table li ul.starts li {
+    display: inline-block;
+}
+
+section.portfolio-details .content .description .infos ul.table li ul.starts li i {
+    color: #bbbb1f;
+    font-size: 15px;
+}
+
+section.portfolio-details .content .description .infos ul.table li .info {
+    font-size: 17px;
+    color: #333;
+}
+
+/* contanct */
+section.map, section.email-us {
+    display: inline-block;
+    width: 100%;
+    padding: 60px 7%;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+section.map div.title, section.map .content, section.email-us div.title, section.email-us .content {
+    display: block;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+section.map .content, section.email-us .content {
+    width: 80%;
+    position: relative;
+}
+
+section.map .title h1 , section.email-us .title h1 {
+    font-size: 55px;
+    color: #2D253D;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+section.map .title p , section.email-us .title p {
+    color: #212121aa;
+    font-size: 19px;
+    text-indent: 25px;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+section.email-us .content .infos {
+    display: block;
+    float: left;
+    width: 30%;
+    text-align: left;
+    padding-right: 25px;
+}
+
+section.email-us .content .infos li {
+    line-height: 1.9;
+}
+
+section.email-us .content .infos .icon {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+section.email-us .content .infos .info {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+section.email-us .content .infos .info i {
+    display: block;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #6b6a6a;
+    margin-left: 40px;
+    position: relative;
+    top: -10px;
+}
+
+section.email-us .form {
+    display: block;
+    width: 70%;
+    float: right;
+    padding-left: 25px;
+    text-align: right;
+    position: relative;
+    overflow: hidden;
+}
+
+section.email-us .form button {
+    display: inline-block;
+    width: 230px;
+    height: 40px;
+    background: linear-gradient(90deg, #119955, #125C4B);
+    border: 0px solid #125C4B;
+    border-radius: 3px;
+    color: #E0E0E0;
+    font-family: Rubik;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0px 8px 14px -8px #125C4B;
+    transition: all 100ms linear;
+}
+
+section.email-us .form button:hover {
+    box-shadow: 0px 0px 0px 0px #125C4B;
+}
+
+section.email-us .form input, section.email-us .form textarea {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 2px solid #125C4B;
+    border-radius: 3px;
+    color: #212121;
+    font-family: Rubik;
+    font-size: 15px;
+    text-indent: 15px;
+    transition: all 100ms linear;
+}
+
+section.email-us .form textarea {
+    min-height: 150px;
+    max-width: 100%;
+    min-width: 100%;
+    padding-top: 10px;
+}
+
+section.email-us .form textarea:hover, section.email-us .form textarea:focus, section.email-us .form input:hover, section.email-us .form input:focus {
+    border: 2px solid #2d253d;
+}
+
+section.email-us .form .alert {
+    display: inline-block;
+    margin: 10px 0;
+    border-radius: 2px;
+    border: 1px solid #2d253d;
+    font-size: 13px;
+    position: relative;
+    left: -200%;
+    opacity: 0;
+}
+
+section.email-us .form .alert p {
+    padding: 10px;
+}
+
+section.email-us .form .alert.success {
+    color: #119955;
+    border: 1px solid #119955;
+    animation: alert 500ms ease forwards running
+}
+
+section.email-us .form .alert.error {
+    color: #b73f3f;
+    border: 1px solid #b73f3f;
+    animation: alert 500ms ease forwards running;
+}
+
+@keyframes alert {
+    0% {
+        left: -200%;
+        opacity: 0;
+    }
+
+    100%  {
+        left: 0%;
+        opacity: 1;
+    }
 }
