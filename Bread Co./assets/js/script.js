@@ -1,7 +1,5 @@
 "use strict"
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
     let sidNav = document.querySelector('.sidenav')
@@ -15,6 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
         fullWidth: false,
         dist: -100,
         numVisible: 5
-    });
+    })
+
+    let tabs = document.querySelectorAll('.tabs');
+    M.Tabs.init(tabs, {
+        swipeable: true
+    })
+
 
 })

@@ -1,104 +1,104 @@
-:root{
+:root {
     --bread-color: #8A331B
 }
 
-body{
+body {
     font-family: "source sans pro"
 }
 
-.text-bread{
+.text-bread {
     color: var(--bread-color) !important
 }
 
-.bread{
+.bread {
     background-color: var(--bread-color) !important
 }
 
-.capitalize{
+.capitalize {
     text-transform: capitalize !important
 }
 
-.uppercase{
+.uppercase {
     text-transform: uppercase !important
 }
 
-.bold{
+.bold {
     font-weight: 700 !important
 }
 
-.material-icons{
+.material-icons {
     color: var(--bread-color) !important
 }
 
-.brand-logo{
+.brand-logo {
     height: inherit
 }
 
-.img-h{
+.img-h {
     display: block;
     height: 100%;
 }
 
-.img-w{
+.img-w {
     display: block;
     width: 100%;
 }
 
-.overflow-h{
+.overflow-h {
     overflow: hidden !important
 }
 
-.user-view{
+.user-view {
     overflow: hidden;
     text-align: center;
 }
 
-.user-view .background{
+.user-view .background {
     width: inherit;
 }
 
-.user-view .background img{
-   height: 100%;
+.user-view .background img {
+    height: 100%;
 }
 
 .user-view .background::before,
-.parallax-container .parallax::after{
-   content: "";
-   display: block;
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   left: 0;
-   background: #00000070;
+.parallax-container .parallax::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00000070;
 }
 
-.user-view .sidenav-img{
-    width:100%;
+.user-view .sidenav-img {
+    width: 100%;
 }
 
-.center-div{
+.center-div {
     margin: 0 auto
 }
 
-.parallax-container-small{
+.parallax-container-small {
     height: 300px;
 }
 
-.parallax-header{
+.parallax-header {
     margin-top: 20px;
 }
 
-.parallax-header .divider{
+.parallax-header .divider {
     height: 3px;
 }
 
 .parallax-header p,
-.parallax-header h1{
+.parallax-header h1 {
     font-weight: 700
 }
 
-.carousel .review-item{
+.carousel .review-item {
     width: 70%;
     max-width: 450px;
     height: auto;
@@ -107,19 +107,19 @@ body{
     padding: 25px;
 }
 
-.carousel a.review-item{
+.carousel a.review-item {
     color: #212121 !important
 }
 
-.parallax-container.reviews{
-    height: auto 
+.parallax-container.reviews {
+    height: auto
 }
 
-.single-item{
+.single-item {
     margin: 50px 0;
 }
 
-.single-item .thumb{
+.single-item .thumb {
     display: inline-block;
     border-radius: 3px;
     overflow: hidden;
@@ -129,40 +129,40 @@ body{
     border-radius: 50%
 }
 
-.footer-copyright{
+.footer-copyright {
     background-color: rgba(0, 0, 0, 0.5) !important
 }
 
-.page-footer .input-field .material-icons{
+.page-footer .input-field .material-icons {
     color: #FFFFFF !important;
     transition: color 250ms ease
 }
 
-.input-field input{
+.input-field input {
     color: #000 !important;
     border-bottom-color: #FFF !important;
     box-shadow: 0 1px 0 0 #FFF !important;
 }
 
-.input-field label{
+.input-field label {
     color: #FFF !important
 }
 
-ul.footer-socail-icons{
+ul.footer-socail-icons {
     padding: 0
 }
 
-ul.footer-socail-icons li{
+ul.footer-socail-icons li {
     display: inline-block;
 }
 
-ul.footer-socail-icons li a{
+ul.footer-socail-icons li a {
     display: block;
     width: 30px;
     margin: 0 auto
 }
 
-.video-container{
+.video-container {
     padding: 25px !important;
     height: 350px;
 }
@@ -175,14 +175,43 @@ ul.footer-socail-icons li a{
     background-position: center center;
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.video .play{
+.video .play {
     height: 100%;
     background: #00000070;
 }
- 
-.video .play img{
+
+.video .play img {
     margin: 0 auto
+}
+
+.tabs .tab a:focus,
+.tabs .tab a.active {
+    font-weight: 700
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+    background-color: #8A331B20;
+}
+
+.tabs .indicator {
+    background-color: var(--bread-color) !important;
+}
+
+.tabs-content.carousel.carousel-slider {
+    height: 570px !important;
+}
+
+@media only screen and (max-width: 600px){
+    .tabs-content.carousel.carousel-slider {
+        height: 2250px !important;
+    }
+}
+
+.single-menu-item {
+    margin-top: 25px;
+    height: auto !important;
 }
