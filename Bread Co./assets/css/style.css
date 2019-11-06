@@ -178,7 +178,7 @@ body {
     transition: color 250ms ease
 }
 
-.input-field input {
+.page-footer .input-field input {
     color: #000 !important;
     border-bottom-color: #FFF !important;
     box-shadow: 0 1px 0 0 #FFF !important;
@@ -254,4 +254,18 @@ ul.footer-socail-icons li a {
 .single-menu-item {
     margin-top: 25px;
     height: auto !important;
+}
+
+.contact-form .input-field label{
+    color: var(--bread-color) !important
+}
+
+.contact-form form i{
+    color: #fff !important
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid var(--bread-color);
+    -webkit-box-shadow: 0 1px 0 0 var(--bread-color) ;
+    box-shadow: 0 1px 0 0 var(--bread-color) ;
 }
