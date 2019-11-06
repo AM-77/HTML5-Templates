@@ -129,6 +129,46 @@ body {
     border-radius: 50%
 }
 
+.single-menu-item .thumb {
+    overflow: hidden;  
+}
+
+.single-menu-item .thumb img,
+.single-item .cat .thumb img{
+    transition: all 500ms ease
+}
+
+.single-menu-item .thumb:hover img,
+.single-item .cat .thumb:hover img{
+    transform: scale(1.2)
+}
+
+.single-item .chef-team .thumb{
+    border-radius: 3px;
+    position: relative;
+}
+
+.single-item .chef-team .thumb .content{
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #8A331Bcc;
+    padding-top: 70px;
+    opacity: 0;
+    transition: opacity 650ms ease
+}
+
+.single-item .chef-team .thumb .content:hover{
+    opacity: 1;
+}
+
+.single-item .chef-team .thumb .content img{
+    width: 20px;
+}
+
 .footer-copyright {
     background-color: rgba(0, 0, 0, 0.5) !important
 }
