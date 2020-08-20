@@ -4,27 +4,433 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Liesma</title>
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/png">
 
+  <!-- stylesheets -->
   <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendors/lightgallery/css/lightgallery.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-  <div class="container">
-    <header>
-      
-      <img src="assets/images/logo.png" />
-    </header>
-    <main></main>
-    <footer></footer>
+<body class="home">
+  <div class="nav">
+    <div class="links">
+      <a class="active" href="index.html" alt="home page">home</a>
+      <a href="about.html" alt="about page">about</a>
+      <a href="contact.html" alt="contact page">contact</a>
+      <a href="/" alt="github">github</a>
+    </div>
   </div>
+  <div class="container">
+    <header class="header row">
+      <a class="logo_link" href="/">
+        <svg  class="logo_img" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+          <g>
+            <g>
+              <g>
+                <path d="M499.833,178.083c-1.417-4.417-5.521-7.417-10.167-7.417H348.542c-3.813,0-7.354,2.042-9.25,5.354
+                  c-1.896,3.313-1.896,7.385,0.042,10.688L456.625,388c1.896,3.25,5.354,5.26,9.125,5.292c0.021,0,0.063,0,0.083,0
+                  c3.729,0,7.188-1.948,9.125-5.146C499.188,348.073,512,302.385,512,256C512,229.521,507.896,203.313,499.833,178.083z"/>
+                <path d="M228.583,143.99c1.917,3.302,5.438,5.344,9.25,5.344h233.646c3.771,0,7.25-1.99,9.167-5.219
+                  c1.938-3.24,2-7.25,0.188-10.552c-35.542-65.177-97.458-111.646-169.875-127.5c-4.625-0.979-9.208,1.063-11.521,5.063
+                  l-70.833,122.188C226.688,136.615,226.688,140.688,228.583,143.99z"/>
+                <path d="M376.375,292.667c-1.896-3.281-5.417-5.302-9.208-5.302c0,0,0,0-0.021,0c-3.792,0-7.292,2.031-9.208,5.313
+                  L240.25,495.646c-1.875,3.26-1.917,7.26-0.083,10.542c1.833,3.292,5.25,5.365,9,5.479l2.396,0.135
+                  C253.021,511.906,254.5,512,256,512c72.208,0,141.5-30.969,190.104-84.958c3.083-3.448,3.604-8.5,1.271-12.5L376.375,292.667z"/>
+                <path d="M172.938,336.01c1.917-3.292,1.917-7.354,0.021-10.656L56.417,122.417c-1.875-3.26-5.333-5.292-9.083-5.354
+                  c-3.896-0.479-7.292,1.854-9.25,5.073C13.167,162.604,0,208.885,0,256c0,26.479,4.104,52.688,12.167,77.917
+                  c1.417,4.417,5.521,7.417,10.167,7.417h141.375C167.521,341.333,171.042,339.302,172.938,336.01z"/>
+                <path d="M283.417,368.01c-1.917-3.302-5.438-5.344-9.25-5.344H40.521c-3.771,0-7.25,1.99-9.167,5.219
+                  c-1.938,3.24-2,7.25-0.188,10.552c35.542,65.177,97.458,111.646,169.875,127.5c0.771,0.167,1.542,0.25,2.292,0.25
+                  c3.75,0,7.292-1.979,9.229-5.313l70.833-122.188C285.313,375.385,285.313,371.313,283.417,368.01z"/>
+                <path d="M136.125,218.375c1.896,3.302,5.417,5.344,9.229,5.354h0.021c3.813,0,7.313-2.021,9.229-5.313L271.75,16.354
+                  c1.875-3.26,1.917-7.26,0.083-10.542c-1.833-3.292-5.25-5.365-9-5.479l-2.396-0.135C258.979,0.094,257.5,0,256,0
+                  C184.542,0,115.75,30.427,67.229,83.49c-3.125,3.427-3.688,8.479-1.375,12.51L136.125,218.375z"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </a>
+      <button class="menu_btn menu_open">
+        <div class="wrap">
+            <span class="menu">menu</span>
+            <span class="close">close</span>
+        </div>
+      </button>
+    </header>
+    <div class="page-heading row">
+      <h1 class="title col-sm-12 text-center">I'm Liam</h1>
+      <p class="description col-sm-12 text-center">
+        Professional photographer of landscapes, still photography and architecture.
+        <br />
+        All photographs are taken with my Nikon Z7, for business inquiries contact me.
+      </p>  
+    </div>
+    <div class="pictures">
+      <div class="button-group filters-button-group">
+        <button class="button is-checked" data-filter="*">all</button>
+        <button class="button" data-filter=".minimal">minimal</button>
+        <button class="button" data-filter=".person">person</button>
+        <button class="button" data-filter=".art">art</button>
+        <button class="button" data-filter=".animal">animal</button>
+        <button class="button" data-filter=".nature">nature</button>
+        <button class="button" data-filter=".music">music</button>
+        <button class="button" data-filter=".home">home</button>
+      </div>
 
+      <div class="grid" id="lightgallery">
+        <div data-src="assets/images/portfolio/01.jpg" data-category="minimal person" class="minimal person grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/01.jpg" alt="minimal person">
+          </div>
+          <div class="infos">
+            <h3 class="title">Grace Hoffmann</h3>
+            <div class="categories">
+              <p class="category" data-filter=".minimal">minimal</p>
+              <p class="category" data-filter=".person">person</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/02.jpg" data-category="nature minimal art" class="nature minimal art grid-item">
+          <div class="img">
+            <img src="assets/images/portfolio/02.jpg" alt="nature minimal art">
+          </div>
+          <div class="infos">
+            <h3 class="title">Tode Art</h3>
+            <div class="categories">
+              <p class="category" data-filter=".minimal">minimal</p>
+              <p class="category" data-filter=".art">art</p>
+              <p class="category" data-filter=".nature">nature</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/03.jpg" data-category="nature art music home" class="nature art music home grid-item grid-item--height3">
+          <div class="img">
+            <img src="assets/images/portfolio/03.jpg" alt="nature art music home">
+          </div>
+          <div class="infos">
+            <h3 class="title">Jorlai</h3>
+            <div class="categories">
+              <p class="category" data-filter=".art">art</p>
+              <p class="category" data-filter=".nature">nature</p>
+              <p class="category" data-filter=".music">music</p>
+              <p class="category" data-filter=".home">home</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/04.jpg" data-category="art minimal" class="art minimal grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/04.jpg" alt="art minimal">
+          </div>
+          <div class="infos">
+            <h3 class="title">Ada Weel</h3>
+            <div class="categories">
+              <p class="category" data-filter=".minimal">minimal</p>
+              <p class="category" data-filter=".art">art</p>
+              <p class="category" data-filter=".nature">nature</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/05.jpg" data-category="nature art minimal" class="nature art minimal grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/05.jpg" alt="nature art minimal">
+          </div>
+          <div class="infos">
+            <h3 class="title">Kinfolk</h3>
+            <div class="categories">
+              <p class="category" data-filter=".minimal">minimal</p>
+              <p class="category" data-filter=".art">art</p>
+              <p class="category" data-filter=".nature">nature</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/06.jpg" data-category="person art" class="person art grid-item grid-item--height3">
+          <div class="img">
+            <img src="assets/images/portfolio/06.jpg" alt="person art">
+          </div>
+          <div class="infos">
+            <h3 class="title">son goku</h3>
+            <div class="categories">
+              <p class="category" data-filter=".person">person</p>
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/07.jpg" data-category="minimal art music" class="minimal art music grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/07.jpg" alt="minimal art music">
+          </div>
+          <div class="infos">
+            <h3 class="title">cassette tape</h3>
+            <div class="categories">
+              <p class="category" data-filter=".minimal">minimal</p>
+              <p class="category" data-filter=".art">art</p>
+              <p class="category" data-filter=".music">music</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/08.jpg" data-category="minimal art music" class="minimal art music grid-item grid-item--height3">
+          <div class="img">
+            <img src="assets/images/portfolio/08.jpg" alt="PNL">
+          </div>
+          <div class="infos">
+            <h3 class="title">PNL</h3>
+            <div class="categories">
+              <p class="category" data-filter=".minimal">minimal</p>
+              <p class="category" data-filter=".art">art</p>
+              <p class="category" data-filter=".music">music</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/09.jpg" data-category="nature animal" class="nature animal grid-item grid-item--height3">
+            <div class="img">
+            <img src="assets/images/portfolio/09.jpg" alt="nature animal">
+          </div>
+          <div class="infos">
+            <h3 class="title">blue whale</h3>
+            <div class="categories">
+              <p class="category" data-filter=".nature">nature</p>
+              <p class="category" data-filter=".animal">animal</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/10.jpg" data-category="home minimal" class="home minimal grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/10.jpg" alt="home minimal">
+          </div>
+          <div class="infos">
+            <h3 class="title">Stairs</h3>
+            <div class="categories">
+              <p class="category" data-filter=".minimal">minimal</p>
+              <p class="category" data-filter=".home">home</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/11.jpg" data-category="music minimal art" class="music minimal art grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/11.jpg" alt="music minimal art">
+          </div>
+          <div class="infos">
+            <h3 class="title">The vinyl</h3>
+            <div class="categories">
+              <p class="category" data-filter=".music">music</p>
+              <p class="category" data-filter=".minimal">minimal</p>
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/12.jpg" data-category="nature" class="nature grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/12.jpg" alt="nature">
+          </div>
+          <div class="infos">
+            <h3 class="title">foggy road</h3>
+            <div class="categories">
+              <p class="category" data-filter=".nature">nature</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/13.jpg" data-category="nature minimal" class="nature minimal grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/13.jpg" alt="nature minimal">
+          </div>
+          <div class="infos">
+            <h3 class="title">a plant in a brick</h3>
+            <div class="categories">
+              <p class="category" data-filter=".nature">nature</p>
+              <p class="category" data-filter=".minimal">minimal</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/14.jpg" data-category="art" class="art grid-item">
+          <div class="img">
+            <img src="assets/images/portfolio/14.jpg" alt="art">
+          </div>
+          <div class="infos">
+            <h3 class="title">The Akatsuki</h3>
+            <div class="categories">
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/15.jpg" data-category="home minimal" class="home minimal grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/15.jpg" alt="home minimal">
+          </div>
+          <div class="infos">
+            <h3 class="title">The Chair</h3>
+            <div class="categories">
+              <p class="category" data-filter=".home">home</p>
+              <p class="category" data-filter=".minimal">minimal</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/16.jpg" data-category="art" class="art grid-item grid-item--height3">
+          <div class="img">
+            <img src="assets/images/portfolio/16.jpg" alt="art">
+          </div>
+          <div class="infos">
+            <h3 class="title">human emotions</h3>
+            <div class="categories">
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/17.jpg" data-category="animal" class="animal grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/17.jpg" alt="animal">
+          </div>
+          <div class="infos">
+            <h3 class="title">Oscar</h3>
+            <div class="categories">
+              <p class="category" data-filter=".animal">animal</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/18.jpg" data-category="art music" class="art music grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/18.jpg" alt="art music">
+          </div>
+          <div class="infos">
+            <h3 class="title">The Heart</h3>
+            <div class="categories">
+              <p class="category" data-filter=".music">music</p>
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/19.jpg" data-category="animal person" class="animal person grid-item">
+          <div class="img">
+            <img src="assets/images/portfolio/19.jpg" alt="animal person">
+          </div>
+          <div class="infos">
+            <h3 class="title">cats lover</h3>
+            <div class="categories">
+              <p class="category" data-filter=".person">person</p>
+              <p class="category" data-filter=".animal">animal</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/20.jpg" data-category="nature minimal" class="nature minimal grid-item">
+          <div class="img">
+            <img src="assets/images/portfolio/20.jpg" alt="nature minimal">
+          </div>
+          <div class="infos">
+            <h3 class="title">a bonsai</h3>
+            <div class="categories">
+              <p class="category" data-filter=".nature">nature</p>
+              <p class="category" data-filter=".minimal">minimal</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/21.jpg" data-category="nature art" class="nature art grid-item grid-item--height3">
+          <div class="img">
+            <img src="assets/images/portfolio/21.jpg" alt="nature art">
+          </div>
+          <div class="infos">
+            <h3 class="title">Roses</h3>
+            <div class="categories">
+              <p class="category" data-filter=".nature">nature</p>
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/22.jpg" data-category="animal art" class="animal art grid-item grid-item--height3">
+          <div class="img">
+            <img src="assets/images/portfolio/22.jpg" alt="animal art">
+          </div>
+          <div class="infos">
+            <h3 class="title">Dragon</h3>
+            <div class="categories">
+              <p class="category" data-filter=".animal">animal</p>
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/23.jpg" data-category="art" class="art grid-item">
+          <div class="img">
+            <img src="assets/images/portfolio/23.jpg" alt="art">
+          </div>
+          <div class="infos">
+            <h3 class="title">Waves</h3>
+            <div class="categories">
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/24.jpg" data-category="minimal person art" class="minimal person art grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/24.jpg" alt="minimal person art">
+          </div>
+          <div class="infos">
+            <h3 class="title">minimal portrait</h3>
+            <div class="categories">
+              <p class="category" data-filter=".minimal">minimal</p>
+              <p class="category" data-filter=".person">person</p>
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/25.jpg" data-category="animal art" class="animal art grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/25.jpg" alt="animal art">
+          </div>
+          <div class="infos">
+            <h3 class="title">the two birds</h3>
+            <div class="categories">
+              <p class="category" data-filter=".animal">animal</p>
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/26.jpg" data-category="minimal art" class="minimal art grid-item grid-item--height2">
+          <div class="img">
+            <img src="assets/images/portfolio/26.jpg" alt="minimal art">
+          </div>
+          <div class="infos">
+            <h3 class="title">Marble circle</h3>
+            <div class="categories">
+              <p class="category" data-filter=".minimal">minimal</p>
+              <p class="category" data-filter=".art">art</p>
+            </div>
+          </div>
+        </div>
+        <div data-src="assets/images/portfolio/27.jpg" data-category="animal" class="animal grid-item">
+          <div class="img">
+            <img src="assets/images/portfolio/27.jpg" alt="animal">
+          </div>
+          <div class="infos">
+            <h3 class="title">Zen Fox</h3>
+            <div class="categories">
+              <p class="category" data-filter=".animal">animal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer container-fliud">
+    <div class="row col-sm-12">
+      <div class="col-md-6 col-sm-12 links">
+        <a href="https://www.facebook.com" target="_blank" title="Facebook account">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" title="Instagram account">Instagram</a>
+        <a href="https://www.twitter.com" target="_blank" title="Twitter account">Twitter</a>
+        <a href="https://www.pintrest.com" target="_blank" title="Pintrest account">Pintrest</a>
+        <a href="https://www.unsplash.com" target="_blank" title="Unsplash account">Unsplash</a>
+      </div>
+      <div class="col-sm-12 col-md-6 copyright">
+        <p class="copy">© Copyright <script>document.write(new Date().getFullYear())</script></script></p>
+        <p class="auther">photographer Theme by <a href="https://www.github.com/am-77">AM-77</a></p>
+        <p class="right">All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
 
-  <!-- jQuery version must be >= 1.8.0; -->
+  <!-- javascript -->
   <script src="assets/vendors/jquery/jquery-3.5.1.min.js"></script>
-
-
-  <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional)
-  <script src="jquery.mousewheel.min.js"></script> -->
+  <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
+  <script src="assets/vendors/lightgallery/js/lightgallery-all.min.js"></script>
+  <script src="assets/vendors/scrollreveal/scrollreveal.js"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 </html>
