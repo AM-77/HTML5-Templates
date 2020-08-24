@@ -8,6 +8,7 @@
 
   <!-- stylesheets -->
   <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' />  
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="contact">
@@ -19,13 +20,10 @@
       <a href="/" alt="github">github</a>
     </div>
   </div>
-  <div class="heading">
-    <div id="map"></div>
-  </div>
   <div class="container">
     <header class="header row">
       <a class="logo_link" href="/">
-        <svg  class="logo_img" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve">
+        <svg class="logo_img" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve">
           <g>
             <g>
               <g>
@@ -59,117 +57,84 @@
         </div>
       </button>
     </header>
+    <div class="heading">
+      <div id="map"></div>
+    </div>
+    <div class="informations">
+      <div class="contact-infos row">
+        <div class="intro col-lg-6 col-md-12">
+          <h2>Hello There !</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus neque animi vitae? Quasi vero nisi rerum magni 
+            soluta dignissimos, officiis rem, quisquam deleniti, maiores quae ratione iusto? Eos, quas adipisci?</p>
+        </div>
+        <div class="address col-lg-3 col-md-6 col-sm-12">
+          <h2>address:</h2>      
+          <p><span>ROAD:</span> 62 Frogner,</p>
+          <p><span>ZIP:</span> 56744</p>
+          <p><span>CITY:</span> Oslo, Norway</p>
+        </div>
+        <div class="contact col-lg-3 col-md-6 col-sm-12">
+          <h2>contact:</h2>      
+          <p><span>EMAIL:</span> contact@mdx.com</p>
+          <p><span>TEL:</span> +1 (23) 456-7890</p>
+          <p><span>FAX:</span> +1 (23) 456-7890</p>
+        </div>
+      </div>
+      <div class="contact-form row">
+        <form class="col-lg-12" action="">
+            <div class="col-lg-12">
+              <p>Fields marked with an <span class="star">*</span> are required</p>
+            </div>
+            <div class="input col-lg-12">
+              <label for="name">name: <span class="star">*</span></label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="input col-lg-12">
+              <label for="email">email: <span class="star">*</span></label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="message col-lg-12">
+              <label for="message">message: <span class="star">*</span></label>
+              <textarea name="message" id="message"></textarea>
+            </div>
+            <div class="send col-lg-12">
+              <button>send</button>
+            </div>
+        </form>
+      </div>
+    </div>
   </div>
-
-  
+  <footer class="footer">
+    <div class="row col-sm-12">
+      <div class="col-md-6 col-sm-12 links">
+        <a href="https://www.facebook.com" target="_blank" title="Facebook account">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" title="Instagram account">Instagram</a>
+        <a href="https://www.twitter.com" target="_blank" title="Twitter account">Twitter</a>
+        <a href="https://www.pintrest.com" target="_blank" title="Pintrest account">Pintrest</a>
+        <a href="https://www.unsplash.com" target="_blank" title="Unsplash account">Unsplash</a>
+      </div>
+      <div class="col-sm-12 col-md-6 copyright">
+        <p class="copy">© Copyright <script>document.write(new Date().getFullYear())</script></script></p>
+        <p class="auther">photographer Theme by <a href="https://www.github.com/am-77">AM-77</a></p>
+        <p class="right">All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
   <!-- javascript -->
-  <script src="assets/vendors/jquery/jquery-3.5.1.min.js"></script>
-  <script src="assets/js/script.js"></script>
-  <script>
-      function initMap() {
-        var styledMapType = new google.maps.StyledMapType(
-          [
-            {
-                "featureType": "administrative",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#856404"
-                    }
-                ]
-            },
-            {
-                "featureType": "landscape",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "color": "#f1f2f3"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "saturation": -100
-                    },
-                    {
-                        "lightness": 45
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "color": "#4f595d"
-                    },
-                    {
-                        "visibility": "on"
-                    }
-                ]
-            }
-        ],
-        { 
-          name: 'Liam'
-        })
-
-        const map = new google.maps.Map(document.getElementById('map'), {
-          center: { lat:36.726017, lng: 3.082667 },
-          zoom: 11,
-          mapTypeControlOptions: { mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain', 'styled_map'] }
-        })
-        map.mapTypes.set('styled_map', styledMapType)
-        map.setMapTypeId('styled_map')
-
-        const marker = new google.maps.Marker({
-          position: { lat:36.726017, lng: 3.082667 },
-          title:"Hello !"
-        })
-        marker.setMap(map)
-      }
+    <script src="assets/vendors/jquery/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/token.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <script>
+      mapboxgl.accessToken = MAPBOX_TOKEN
+      const map = new mapboxgl.Map({
+        container: 'map',
+        center:[10.70892, 59.91924],
+        zoom: 12,
+        style: 'mapbox://styles/mapbox/dark-v10'
+      })
+      new mapboxgl.Marker().setLngLat([10.70892, 59.91924]).addTo(map)
     </script>
-
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgfGOS4JyDg8Hp_rVFf1MsFHxQPpI8Ys8&callback=initMap"> </script>
-
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
 

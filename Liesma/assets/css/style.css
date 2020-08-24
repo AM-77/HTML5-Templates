@@ -13,11 +13,12 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  z-index: 3;
   opacity: 0;
   background: rgba(0,0,0, 0.95);
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 body.open_nav {
@@ -26,7 +27,7 @@ body.open_nav {
 
 body.open_nav .nav {
   pointer-events: all;
-  animation: open_nav 450ms linear forwards running;
+  animation: open_nav 250ms linear forwards running;
 }
 
 @keyframes open_nav {
@@ -40,7 +41,7 @@ body.open_nav .nav {
 }
 
 body.close_nav .nav {
-  animation: close_nav 250ms linear forwards;
+  animation: close_nav 150ms linear forwards;
 }
 
 @keyframes close_nav {
@@ -53,11 +54,13 @@ body.close_nav .nav {
   }
 }
 
-body.open_nav .header .logo_img  {
+body.open_nav .header .logo_img,
+body.contact .header .logo_img  {
   fill: #f1f2f3;
 }
 
-body.open_nav .header .menu_btn span {
+body.open_nav .header .menu_btn span,
+body.contact .header .menu_btn span {
   color: #f1f2f3
 }
 
@@ -76,6 +79,17 @@ body .nav .links a{
  position: relative;
  opacity: 0;
  top: -10px;
+}
+
+@media only screen and (max-width: 600px) {
+  body .nav .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body .nav .links a {
+    margin-bottom: 25px
+  }
 }
 
 body .nav .links a:nth-child(1) {
@@ -98,8 +112,6 @@ body.open_nav .nav .links a {
   opacity: 1;
   top: 0px;
 }
-
-
 
 body .nav .links a:after {
   display: block;
@@ -141,7 +153,7 @@ body .nav .links a.active:after {
   height: 60px;
   padding: 10px 15px;
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .header a.logo_link {
@@ -583,6 +595,10 @@ body .nav .links a.active:after {
   position: relative;
 }
 
+.contact .header {
+  margin-bottom: 390px;
+}
+
 .contact .heading {
   position: absolute;
   top: 0;
@@ -594,4 +610,117 @@ body .nav .links a.active:after {
 .contact .heading #map {
   width: 100%;
   height: 100%
+}
+
+.contact .mapboxgl-marker.mapboxgl-marker-anchor-center svg g g:nth-child(2) {
+  fill: #121212
+}
+
+.contact .informations {
+  padding: 50px 0
+}
+
+.contact .informations .contact-infos > div {
+  margin-bottom: 25px;
+}
+
+.contact .informations .contact-infos .intro {
+  padding-right: 50px;
+}
+
+.contact .informations .contact-infos h2 {
+  color: #121212;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.contact .informations .contact-infos p {
+  color: #333333;
+  font-size: 17px;
+  line-height: 1.9
+}
+
+.contact .informations .contact-infos p span {
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.contact-form span.star {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+.contact-form .input {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.contact-form label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-size: 15px;
+  width: 55px;
+  height: 40px;
+  position: relative;
+}
+
+.contact-form label:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: #856404;
+}
+
+.contact-form .input input {
+  border: none;
+  border-bottom: 1px solid #21212121;
+  width: 100%;
+  height: 40px;
+  outline: none;
+}
+
+.contact-form .message {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.contact-form .message label {
+  width: 70px;
+  position: absolute;
+  background: #ffffff;
+} 
+
+.contact-form .message textarea {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 110px;
+  line-height: 2.2;
+  border: none;
+  border-bottom: 1px solid #21212121;
+  outline: none;
+  text-indent: 80px;
+}
+
+.contact-form .send button {
+  text-transform: uppercase;
+  color: #212121;
+  background: #f1f2f3;
+  border: 1px solid #21212121;
+  padding: 5px 15px; 
+  transition: all 250ms ease;
+  outline: none;
+  cursor: pointer;
+}
+
+.contact-form .send button:hover {
+  color: #856404;
+  border-color: #856404;
 }
