@@ -27,6 +27,9 @@ body.open_nav {
 
 body.open_nav .nav {
   pointer-events: all;
+  -webkit-animation: open_nav 250ms linear forwards;
+  -moz-animation: open_nav 250ms linear forwards;
+  -ms-animation: open_nav 250ms linear forwards;
   animation: open_nav 250ms linear forwards;
 }
 
@@ -41,6 +44,9 @@ body.open_nav .nav {
 }
 
 body.close_nav .nav {
+  -webkit-animation: close_nav 150ms linear forwards;
+  -moz-animation: close_nav 150ms linear forwards;
+  -ms-animation: close_nav 150ms linear forwards;
   animation: close_nav 150ms linear forwards;
 }
 
@@ -366,7 +372,10 @@ body .nav .links a.active:after {
 }
 
 .pictures .grid .grid-item .infos.show h3 {
-  animation: show_title 350ms ease forwards
+  -webkit-animation: show_title 350ms ease forwards;
+  -moz-animation: show_title 350ms ease forwards;
+  -ms-animation: show_title 350ms ease forwards;
+  animation: show_title 350ms ease forwards;
 }
 
 @keyframes show_title {
@@ -382,7 +391,10 @@ body .nav .links a.active:after {
 }
 
 .pictures .grid .grid-item .infos.hide h3 {
-  animation: hide_title 350ms ease forwards
+  -webkit-animation: hide_title 350ms ease forwards;
+  -moz-animation: hide_title 350ms ease forwards;
+  -ms-animation: hide_title 350ms ease forwards;
+  animation: hide_title 350ms ease forwards;
 }
 
 @keyframes hide_title {
@@ -404,6 +416,9 @@ body .nav .links a.active:after {
 }
 
 .pictures .grid .grid-item .infos.show .categories {
+  -webkit-animation: show_cat 350ms ease 150ms forwards;
+  -moz-animation: show_cat 350ms ease 150ms forwards;
+  -ms-animation: show_cat 350ms ease 150ms forwards;
   animation: show_cat 350ms ease 150ms forwards;
 } 
 
@@ -414,6 +429,9 @@ body .nav .links a.active:after {
 }
 
 .pictures .grid .grid-item .infos.hide .categories {
+  -webkit-animation: hide_cat 350ms ease 0ms forwards;
+  -moz-animation: hide_cat 350ms ease 0ms forwards;
+  -ms-animation: hide_cat 350ms ease 0ms forwards;
   animation: hide_cat 350ms ease 0ms forwards;
 } 
 
