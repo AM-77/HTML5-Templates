@@ -27,7 +27,7 @@ body.open_nav {
 
 body.open_nav .nav {
   pointer-events: all;
-  animation: open_nav 250ms linear forwards running;
+  animation: open_nav 250ms linear forwards;
 }
 
 @keyframes open_nav {
