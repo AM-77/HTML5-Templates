@@ -1,3 +1,29 @@
+/* COLORS */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --light: #E0E0E0;
+    --dark: #212121;
+    --text-color: #2D253D;
+    --red: #b73f3f;
+    --green: #119955;
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Regular.ttf');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+    font-weight: normal;
+    font-style: normal
+}
+
 /* RESET CSS */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
@@ -56,8 +82,8 @@ input, select, textarea {
 }
 
 html, body {
-    font-family: Rubik;
-    color: #2D253D;
+    font-family: "Rubik", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
     box-sizing: border-box;
 }
 
@@ -65,10 +91,10 @@ html, body {
     box-sizing: inherit;
 }
 
-/*** ***/
+/***  SELECTION  ***/
 *::selection {
     background-color: #008448cc;
-    color: white;
+    color: var(--white);
 }
 
 /***  BODY  ***/
@@ -80,16 +106,18 @@ body {
 .container {
     display: block;
     width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
 }
 
 /***  HEADER  ***/
 /* logo */
 header.header {
-    position: absolute;
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: 60px;
-    padding: 0 7%;
+    height: 80px;
+    padding: 0px 7%;
     z-index: 99;
 }
 
@@ -99,11 +127,11 @@ header.header.fixed {
     top: -70px;
     left: 0;
     right: 0;
-    background: #ffffff;
+    background: var(--white);
     transform: translateY(70px);
     transition: transform 500ms ease, background 500ms ease;
     -webkit-transition: transform 500ms ease, background 500ms ease;
-    box-shadow: 0px -7px 10px 0px #212121;
+    box-shadow: 0px -7px 10px 0px var(--dark);
 }
 
 header.header .logo {
@@ -121,18 +149,22 @@ header.header .logo img {
 
 /* navbar */
 header.header nav.navbar {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     height: 100%;
-    float: right;
+    margin-left:  auto;
 }
 
 header.header nav.navbar ul {
+    display: flex;
     width: 100%;
     height: 100%;
 }
 
 header.header nav.navbar ul li {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    height: 100%;
     line-height: 4;
     margin-right: 35px;
 }
@@ -142,8 +174,8 @@ header.header nav.navbar ul li:last-child {
 }
 
 header.header nav.navbar li a {
-    font: 500 15px "Rubik", sans-serif;
-    color: #2D253D;
+    font: 500 15px "Rubik", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 700;
     transition: color 250ms ease;
@@ -151,29 +183,31 @@ header.header nav.navbar li a {
 }
 
 header.header nav.navbar li a:hover {
-    color: #125C4B;
+    color: var(--green);
 }
 
 header.header nav.navbar li a.current {
-    color: #007147
+    color: var(--green);
 }
 
 header.header nav.navbar li a.current:after {
     display: block;
     content: "";
-    width: 120%;
+    width: 100%;
     height: 3px;
-    background: #007147;
+    background: var(--green);
     border-radius: 3px;
     position: relative;
-    top: -20px;
-    right: 10%;
+    top: 0px;
+    right: 0;
 }
 
 /***  BANNER & INTRO ***/
 section.banner, section.intro {
-    display: block;
-    padding: 190px 7% 120px 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
 }
 
 section.intro {
@@ -182,6 +216,8 @@ section.intro {
 
 section.banner .title, section.intro .introduction {
     display: inline-block;
+    width: 50%;
+    padding: 25px;
 }
 
 section.banner .title h3 {
@@ -190,16 +226,6 @@ section.banner .title h3 {
     font-size: 40px;
 }
 
-section.banner .title h3:after {
-    display: block;
-    content: "";
-    width: 420px;
-    height: 3px;
-    background: #2D253D;
-    float: right;
-    position: relative;
-    top: 20px;
-}
 
 section.banner .title h1 {
     display: block;
@@ -220,15 +246,16 @@ section.banner .title button, section.intro .introduction button {
     display: inline-block;
     width: 130px;
     height: 45px;
-    background-image: linear-gradient(90deg, #119955, #125C4B);
+    background-image: linear-gradient(90deg, var(--green), #125C4B);
     border: 1px solid transparent;
     border-radius: 3px;
-    color: #E0E0E0;
-    font-family: Rubik;
+    color: var(--light);
+    font-family: "Rubik", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     cursor: pointer;
-    box-shadow: 0px 8px 12px -8px #125C4B;
-    transition: all 450ms ease;
+    opacity: 0.85;
+    box-shadow: 0px 14px 14px -12px #125C4B;
+    transition: all 200ms ease;
 }
 
 section.banner .title button:first-child, section.intro .introduction button:first-child {
@@ -236,16 +263,15 @@ section.banner .title button:first-child, section.intro .introduction button:fir
 }
 
 section.banner .title button:hover, section.intro .introduction button:hover {
-    color: #031712;
-    border: 1px solid #031712;
     box-shadow: 0px 0px 0px 0px #125C4B;
+    opacity: 1;
 }
 
 section.banner .image, section.intro .image {
-    display: inline-block;
-    float: right;
+    display: flex;
+    height: 100%;
     width: 50%;
-    padding: 0 5%;
+    padding: 5%;
 }
 
 section.intro .image {
@@ -271,7 +297,7 @@ section.intro .introduction h3 {
 }
 
 section.intro .introduction p {
-    font-family: "Source sans pro";
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     text-indent: 15px;
     line-height: 1.5;
@@ -300,7 +326,7 @@ section.services .head h3, section.clients .head h3 {
 }
 
 section.services .head p, section.clients .head p {
-    font-family: "Source sans pro";
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 45px;
@@ -308,13 +334,19 @@ section.services .head p, section.clients .head p {
 }
 
 section.services .service, section.clients .client {
-    display: block;
-    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
     padding: 25px 35px;
     box-shadow: 0px 0px 4px -1px #008448;
     border-radius: 3px;
-    cursor: pointer;
+    cursor: col-resize;
     transition: box-shadow 250ms ease;
+}
+
+section.services .service {
+    flex-direction: column;
 }
 
 section.services .service:hover, section.clients .client:hover {
@@ -453,8 +485,7 @@ section.clients .client .client-image img {
 section.clients .client .client-review {
     display: inline-block;
     width: 70%;
-    float: right;
-    text-align: left
+    text-align: left;
 }
 
 section.clients .client .client-review h4 {
@@ -509,7 +540,7 @@ footer.footer ul li a {
     width: 38px;
     height: 38px;
     font-size: 24px;
-    color: #E0E0E0;
+    color: var(--light);
     line-height: 1.7;
     transition: color 150ms ease-out;
 }
@@ -519,7 +550,8 @@ footer.footer ul li a:hover {
 }
 
 footer.footer p {
-    color: #DCDCDC
+    color: #DCDCDC;
+    line-height: 1.75;
 }
 
 footer.footer p .year, footer.footer p i.fa {
@@ -535,7 +567,7 @@ footer.footer p a {
 }
 
 footer.footer p a:hover {
-    color: #E0E0E0
+    color: var(--light)
 }
 
 /* facts */
@@ -555,7 +587,7 @@ section.facts:after {
     position: absolute;
     top: 0;
     right: 0%;
-    background: linear-gradient(90deg, #125C4B, #119955, #125C4B, #119955);
+    background: linear-gradient(90deg, #125C4B, var(--green), #125C4B, var(--green));
     z-index: -1;
     animation: sliding 20000ms ease-out infinite running;
 }
@@ -582,7 +614,7 @@ section.facts .head {
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--white);
 }
 
 section.facts .the-facts {
@@ -596,7 +628,7 @@ section.facts .the-facts .fact {
     display: inline-block;
     position: relative;
     padding: 20px 40px;
-    background: #ffffff;
+    background: var(--white);
     margin: 20px;
     border-radius: 3px;
 }
@@ -621,13 +653,15 @@ section.about_banner, section.services_banner {
 }
 
 section.about_banner div.content, section.services_banner div.content {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 500px;
     padding: 140px 7%;
     z-index: 2;
     background: #ffffff24;
-    text-align: center
+    text-align: center;
 }
 
 section.about_banner div.content .background, section.services_banner div.content .background {
@@ -656,8 +690,8 @@ section.about_banner div h1, section.services_banner div h1 {
 }
 
 section.about_banner div p a, section.services_banner div p a {
-    font: 500 21px "Rubik", sans-serif;
-    color: #2D253D;
+    font: 500 21px "Rubik", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 700;
     transition: all 250ms ease;
@@ -665,7 +699,7 @@ section.about_banner div p a, section.services_banner div p a {
 }
 
 section.about_banner div p a:hover, section.services_banner div p a:hover {
-    color: #119955;
+    color: var(--green);
 }
 
 section.about_banner div p .fa, section.services_banner div p .fa {
@@ -676,46 +710,34 @@ section.about_banner div p .fa, section.services_banner div p .fa {
 
 /* who am I*/
 section.whoami {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 60px 7%;
+    padding: 0 7%;
 }
 
 section.whoami .title {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 25px 0;
+    margin: 50px 0;
 }
 
 section.whoami .title h1 {
     font-size: 55px;
-    color: #2D253D;
+    color: var(--text-color);
     font-weight: 700;
     text-transform: uppercase
 }
 
-section.whoami div.myimage {
-    display: block;
-    width: 50%;
-    float: right;
-    overflow: hidden;
-    padding: 50px;
-}
-
-section.whoami div.myimage img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px -1px #2D253D;
+section.whoami .infos {
+    display: flex;
+    align-items: center;
+    margin: 35px 0;
 }
 
 section.whoami div.content {
-    display: block;
-    width: 50%;
-    float: left;
-    padding: 70px;
+    width: calc(100% - 350px);
 }
 
 section.whoami div.content h1 {
@@ -743,6 +765,22 @@ section.whoami div.content p {
     padding: 20px 0;
 }
 
+section.whoami div.img {
+    display: block;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+section.whoami div.img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px -1px var(--text-color);
+}
+
 /*** Qualifications  ***/
 section.qualifications, section.testimonials, section.skills {
     display: block;
@@ -759,7 +797,7 @@ section.qualifications .head, section.testimonials .head, section.skills .head {
 
 section.qualifications .head h1, section.testimonials .head h3, section.skills .head h3 {
     font-size: 55px;
-    color: #2D253D;
+    color: var(--text-color);
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 25px
@@ -767,7 +805,7 @@ section.qualifications .head h1, section.testimonials .head h3, section.skills .
 
 section.qualifications .head p, section.testimonials .head p, section.skills .head p {
     font-size: 17px;
-    color: #212121;
+    color: var(--dark);
     line-height: 1.5
 }
 
@@ -805,8 +843,8 @@ section.qualifications .head p, section.testimonials .head p, section.skills .he
 }
 
 .qualifications ul li .content {
-    background-color: white !important;
-    box-shadow: 0px 0px 8px -4px #2D253D;
+    background-color: var(--white) !important;
+    box-shadow: 0px 0px 8px -4px var(--text-color);
     position: relative;
     border-radius: 3px;
     top: 7px;
@@ -819,7 +857,7 @@ section.qualifications .head p, section.testimonials .head p, section.skills .he
     padding-bottom: 10px;
     font-weight: 700;
     text-decoration: underline;
-    color: #2D253D;
+    color: var(--text-color);
 }
 
 .qualifications ul li .content p {
@@ -869,7 +907,7 @@ section.skills .tools_expert .skill_main .skill_item h4 {
     text-align: right;
     font-size: 14px;
     font-weight: 700;
-    color: #2D253D;
+    color: var(--text-color);
     margin-bottom: 15px;
 }
 
@@ -888,9 +926,9 @@ section.skills .tools_expert .skill_main .skill_item .progress .progress-bar {
     border-radius: 7px;
     vertical-align: middle;
     align-self: center;
-    background-image: -moz-linear-gradient(0deg, #125C4B 0%, #119955 100%);
-    background-image: -webkit-linear-gradient(0deg, #125C4B 0%, #119955 100%);
-    background-image: -ms-linear-gradient(0deg, #125C4B 0%, #119955 100%);
+    background-image: -moz-linear-gradient(0deg, #125C4B 0%, var(--green) 100%);
+    background-image: -webkit-linear-gradient(0deg, #125C4B 0%, var(--green) 100%);
+    background-image: -ms-linear-gradient(0deg, #125C4B 0%, var(--green) 100%);
 }
 
 /* testimonials */
@@ -909,7 +947,7 @@ section.testimonials .owl-carousel .owl-nav .owl-prev, section.testimonials .owl
     padding: 5px 8px;
     color: #008448;
     margin-left: 10px;
-    background: #FFFFFF;
+    background: var(--white);
     border-radius: 2px;
     border: 1px solid #0084485c;
 }
@@ -936,7 +974,7 @@ section.offers div.title, section.services-testimonials div.title {
 
 section.offers .title h1, section.services-testimonials .title h1 {
     font-size: 55px;
-    color: #2D253D;
+    color: var(--text-color);
     font-weight: 700;
     text-transform: uppercase
 }
@@ -958,7 +996,7 @@ section.offers .services {
 
 section.offers .services .service {
     display: block;
-    background: #FFFFFF;
+    background: var(--white);
     padding: 25px 35px;
     box-shadow: 0px 0px 1px 0px #008448;
     border-radius: 3px;
@@ -1025,7 +1063,7 @@ section.services-testimonials .testimonial .image {
     height: 220px;
     padding: 5px;
     border-radius: 100%;
-    border: 4px solid #2D253D;
+    border: 4px solid var(--text-color);
 }
 
 section.services-testimonials .testimonial .image img {
@@ -1123,7 +1161,7 @@ section.portfolio .content {
 
 section.portfolio .title h1 {
     font-size: 55px;
-    color: #2D253D;
+    color: var(--text-color);
     font-weight: 700;
     text-transform: uppercase
 }
@@ -1230,7 +1268,7 @@ section.portfolio .content .filters-content .info p {
 section.portfolio .content .filters-content .info a {
     text-transform: uppercase;
     text-decoration: none;
-    color: #E0E0E0;
+    color: var(--light);
     font-size: 14px;
     font-weight: 700;
     width: auto;
@@ -1282,7 +1320,7 @@ section.details {
 section.portfolio-details {
     display: block;
     width: 100%;
-    padding: 60px 7%;
+    padding: 0px 7%;
 }
 
 section.portfolio-details div.title, section.portfolio-details .content {
@@ -1294,14 +1332,17 @@ section.portfolio-details div.title, section.portfolio-details .content {
 }
 
 section.portfolio-details .content {
-    width: 70%;
-    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
     position: relative;
 }
 
 section.portfolio-details .title h1 {
     font-size: 55px;
-    color: #2D253D;
+    color: var(--text-color);
     font-weight: 700;
     text-transform: uppercase
 }
@@ -1327,53 +1368,59 @@ section.portfolio-details .content .project-image img {
 }
 
 section.portfolio-details .content .description {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-bottom: 50px;
 }
 
 section.portfolio-details .content .description .details {
     display: block;
-    width: 70%;
+    width: 100%;
     text-align: justify;
     text-indent: 50px;
     font-size: 18px;
     line-height: 1.3;
-    color: #676767;
+    color: var(--text-color);
     float: left;
     padding: 0 20px;
     margin-bottom: 100px;
 }
 
 section.portfolio-details .content .description .infos {
-    display: block;
-    width: 30%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     font-size: 18px;
     line-height: 1.3;
-    float: left;
     padding: 20px;
     text-align: left;
 }
 
 section.portfolio-details .content .description .infos h3 {
     font-size: 20px;
-    color: #297e4a;
+    color: var(--green);
     font-weight: 700;
-    text-transform: uppercase
+    text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
 section.portfolio-details .content .description .infos p {
     font-size: 15px;
+    text-indent: 35px;
 }
 
 section.portfolio-details .content .description .infos ul.table {
-    margin: 25px 0
+   display: flex;
+   justify-content: space-between;
+   margin: 15px 0;
 }
 
 section.portfolio-details .content .description .infos ul.table > li {
     display: inline-block;
     line-height: 1.9;
-    width: 100%;
+    float: left;
+    text-align: center;
 }
 
 section.portfolio-details .content .description .infos ul.table li .title {
@@ -1402,30 +1449,38 @@ section.portfolio-details .content .description .infos ul.table li .info {
 }
 
 /* contanct */
-section.map, section.email-us {
-    display: inline-block;
+section.map, 
+section.email-us {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 60px 7%;
     clear: both;
-    margin-bottom: 50px;
+    margin: 50px 0;
+    padding: 0 7%;
 }
 
-section.map div.title, section.map .content, section.email-us div.title, section.email-us .content {
-    display: block;
-    text-align: center;
-    width: 70%;
+section.map div.title, 
+section.map .content, 
+section.email-us div.title, s
+ection.email-us .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin: 0 auto;
     padding: 25px 0;
 }
 
-section.map .content, section.email-us .content {
-    width: 80%;
-    position: relative;
+section.map .content, 
+section.email-us .content {
+    max-width: 780px;
+    margin: 0 auto;
 }
 
 section.map .title h1 , section.email-us .title h1 {
     font-size: 55px;
-    color: #2D253D;
+    color: var(--text-color);
     font-weight: 700;
     text-transform: uppercase
 }
@@ -1436,6 +1491,7 @@ section.map .title p , section.email-us .title p {
     text-indent: 25px;
     line-height: 1.5;
     padding: 20px 0;
+    text-align: center;
 }
 
 section.email-us .content .infos {
@@ -1443,7 +1499,6 @@ section.email-us .content .infos {
     float: left;
     width: 30%;
     text-align: left;
-    padding-right: 25px;
 }
 
 section.email-us .content .infos li {
@@ -1452,7 +1507,7 @@ section.email-us .content .infos li {
 
 section.email-us .content .infos .icon {
     font-size: 20px;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 
 section.email-us .content .infos .info {
@@ -1467,7 +1522,7 @@ section.email-us .content .infos .info i {
     text-transform: capitalize;
     font-weight: 700;
     color: #6b6a6a;
-    margin-left: 40px;
+    margin-left: 30px;
     position: relative;
     top: -10px;
 }
@@ -1486,11 +1541,11 @@ section.email-us .form button {
     display: inline-block;
     width: 230px;
     height: 40px;
-    background: linear-gradient(90deg, #119955, #125C4B);
+    background: linear-gradient(90deg, var(--green), #125C4B);
     border: 0px solid #125C4B;
     border-radius: 3px;
-    color: #E0E0E0;
-    font-family: Rubik;
+    color: var(--light);
+    font-family: "Rubik", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     cursor: pointer;
     box-shadow: 0px 8px 14px -8px #125C4B;
@@ -1508,8 +1563,8 @@ section.email-us .form input, section.email-us .form textarea {
     margin-bottom: 10px;
     border: 2px solid #125C4B;
     border-radius: 3px;
-    color: #212121;
-    font-family: Rubik;
+    color: var(--dark);
+    font-family: "Rubik", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     text-indent: 15px;
     transition: all 100ms linear;
@@ -1523,14 +1578,14 @@ section.email-us .form textarea {
 }
 
 section.email-us .form textarea:hover, section.email-us .form textarea:focus, section.email-us .form input:hover, section.email-us .form input:focus {
-    border: 2px solid #2d253d;
+    border: 2px solid var(--text-color);
 }
 
 section.email-us .form .alert {
     display: inline-block;
     margin: 10px 0;
     border-radius: 2px;
-    border: 1px solid #2d253d;
+    border: 1px solid var(--text-color);
     font-size: 13px;
     position: relative;
     left: -200%;
@@ -1542,14 +1597,14 @@ section.email-us .form .alert p {
 }
 
 section.email-us .form .alert.success {
-    color: #119955;
-    border: 1px solid #119955;
+    color: var(--green);
+    border: 1px solid var(--green);
     animation: alert 500ms ease forwards running
 }
 
 section.email-us .form .alert.error {
-    color: #b73f3f;
-    border: 1px solid #b73f3f;
+    color: var(--red);
+    border: 1px solid var(--red);
     animation: alert 500ms ease forwards running;
 }
 
